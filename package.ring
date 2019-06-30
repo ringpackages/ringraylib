@@ -5,11 +5,11 @@ aPackageInfo = [
 	:developer = "",
 	:email = "",
 	:license = "MIT License",
-	:version = "1.0.0",
+	:version = "1.0.1",
 	:ringversion = "1.10",
 	:versions = 	[
 		[
-			:version = "1.0.0",
+			:version = "1.0.1",
 			:branch = "master"
 		]
 	],
@@ -22,6 +22,9 @@ aPackageInfo = [
 	],
 	:files = 	[
 		"main.ring",
+		"README.md"
+	],
+	:ringfolderfiles = 	[
 		"bin/raylib.dll",
 		"bin/ring_raylib.dll",
 		"extensions/ringraylib/examples/core/ex1_basicwindow.ring",
@@ -48,11 +51,7 @@ aPackageInfo = [
 		"libdepwin/raylib2.5/lib/cmake/raylib/raylib-config.cmake",
 		"libdepwin/raylib2.5/lib/pkgconfig/raylib.pc",
 		"libdepwin/raylib2.5/lib/raylib.lib",
-		"libdepwin/raylib2.5/lib/raylib_static.lib",
-		"README.md"
-	],
-	:ringfolderfiles = 	[
-
+		"libdepwin/raylib2.5/lib/raylib_static.lib"
 	],
 	:windowsfiles = 	[
 
