@@ -4,7 +4,7 @@ screenWidth  = 800
 screenHeight = 450
 
 InitWindow(screenWidth, screenHeight, "raylib [core] example - keyboard input")
-ballPosition = new Vector2(screenWidth/2, screenHeight/2)
+ballPosition = Vector2(screenWidth/2, screenHeight/2)
 SetTargetFPS(60)
 
 while !WindowShouldClose()
@@ -15,7 +15,7 @@ while !WindowShouldClose()
         BeginDrawing()
 		ClearBackground(RAYWHITE)
 		DrawText("move the ball with arrow keys", 10, 10, 20, DARKGRAY)
-		DrawCircleV(ballPosition.Data(), 50, MAROON)
+		DrawCircleV(ballPosition, 50, MAROON)
         EndDrawing()
 end    
 
