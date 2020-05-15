@@ -124,14 +124,29 @@ func VrDeviceInfo p1,p2,p3,p4,p5,p6,p7,p8
 	oVrDeviceInfo = new VrDeviceInfo(p1,p2,p3,p4,p5,p6,p7,p8)
 	return oVrDeviceInfo
 
-func isKeyDown vKey
+func RayLib_PrepareKey vKey
 	if isNumber(vKey)
-		return isKeyDown_2(vKey)
+		return vKey
 	but isString(vKey)
-		return isKeyDown_2(ASCII(vKey[1]))
+		return ASCII(vKey[1])
 	else 
-		raise("Bad parameter type - IsKeyDown() function")
+		raise("Bad parameter type - RayLib_PrepareKey() function")
 	ok
+
+func isKeyDown vKey
+	return isKeyDown_2(RayLib_PrepareKey(vKey))
+
+func IsKeyPressed vKey
+	return IsKeyPressed_2(RayLib_PrepareKey(vKey))
+
+func IsKeyReleased vKey
+	return IsKeyReleased_2(RayLib_PrepareKey(vKey))
+
+func IsKeyUp vKey
+	return IsKeyUp_2(RayLib_PrepareKey(vKey))
+
+func SetExitKey vKey
+	return SetExitKey_2(RayLib_PrepareKey(vKey))
 
 # Get Pointer Data 
 func GPData vData 
@@ -687,3 +702,358 @@ func DrawTextEx font,text,position,fontSize,spacing,tint
 
 func DrawCubeTexture texture,position,width,height,length,color
 	return DrawCubeTexture_2(GPData(texture),GPData(position),width,height,length,GPData(color))
+
+func SetWindowIcon image 
+	return SetWindowIcon_2( GPData(image) )
+
+func BeginTextureMode target
+	return BeginTextureMode_2( GPData(target) )
+
+func ClearBackground color
+	return ClearBackground_2( GPData(color) )
+
+func ColorToInt color
+	return ColorToInt_2( GPData(color) )
+
+func ColorNormalize color 
+	oVector4 = new Vector4 
+	oVector4.setData( ColorNormalize_2(GPData(color)) )
+	return oVector4 
+
+func ColorToHSV color 
+	oVector4 = new Vector4 
+	oVector4.setData( ColorToHSV_2(GPData(color)) )
+	return oVector4 
+
+func Fade color, alpha 
+	oColor = new Color 
+	oColor.setData( Fade_2( GPData(color), alpha )  )
+	return oColor 
+
+func GetGestureDragVector 
+	oVector2 = new Vector2 
+	oVector2.setData( GetGestureDragVector_2() )
+	return oVector2 
+
+func GetGesturePinchVector 
+	oVector2 = new Vector2 
+	oVector2.setData( GetGesturePinchVector_2() )
+	return oVector2 
+
+func DrawPixel posX, posY, color 
+	return DrawPixel_2(posX, posY, GPData(color))
+
+func DrawLine startPosX, startPosY, endPosX, endPosY, color
+	return DrawLine_2(startPosX, startPosY, endPosX, endPosY, GPData(color))
+
+func DrawCircle centerX, centerY, radius, color
+	return DrawCircle_2(centerX, centerY, radius, GPData(color) )
+
+func DrawCircleGradient centerX, centerY, radius, color1, color2
+	return DrawCircleGradient_2( centerX, centerY, radius, GPData(color1), GPData(color2) )
+
+func DrawCircleLines centerX, centerY, radius, color
+	return DrawCircleLines_2( centerX, centerY, radius, GPData(color) )
+
+func DrawRectangle posX, posY, width, height, color 
+	return DrawRectangle_2( posX, posY, width, height, GPData(color) )
+
+func DrawRectangleGradientV posX, posY, width, height, color1, color2
+	return DrawRectangleGradientV_2( posX, posY, width, height, GPData(color1), GPData(color2) )
+
+func DrawRectangleGradientH posX, posY, width, height, color1, color2
+	return DrawRectangleGradientH_2( posX, posY, width, height, GPData(color1), GPData(color2) )
+
+func DrawRectangleLines posX, posY, width, height, color 
+	return DrawRectangleLines_2(posX, posY, width, height, GPData(color))
+
+func ExportImage image, fileName 
+	return ExportImage_2( GPData(image), fileName ) 
+
+func ExportImageAsCode image, fileName
+	return ExportImageAsCode_2( GPData(image), fileName )
+
+func LoadRenderTexture width, height
+	oRenderTexture2D = new RenderTexture2D 
+	oRenderTexture2D.setData( LoadRenderTexture_2(width, height) )
+	return oRenderTexture2D
+
+func UnloadRenderTexture target 
+	return UnloadRenderTexture_2(GPData(target))
+
+func GetImageDataNormalized image 
+	oVector4 = new Vector4 
+	oVector4.setData( GetImageDataNormalized_2( GPData(image) ) )
+	return oVector4
+
+func GetTextureData texture
+	oImage = new Image 
+	oImage.setData( GetTextureData_2( GPData(texture) ) )
+	return oImage
+
+func GetScreenData
+	oImage = new Image 
+	oImage.setData( GetScreenData_2() )
+	return oImage
+
+func UpdateTexture texture, pixels 
+	return UpdateTexture_2( GPData(texture), pixels )
+
+func ImageCopy image
+	oImage = new Image 
+	oImage.setData( ImageCopy_2(GPData(image)) )
+	return oImage
+
+func ImageToPOT image, fillColor
+	return ImageToPOT_2( GPData(image), GPData(fillColor) )
+
+func ImageFormat image, newFormat 
+	return ImageFormat_2( GPData(image), newFormat )
+
+func ImageAlphaMask image, alphaMask
+	return ImageAlphaMask_2( GPData(image), GPData(alphaMask) )
+
+func ImageAlphaClear image, color, threshold
+	return ImageAlphaClear_2( GPData(image), GPData(color), threshold )
+
+func ImageAlphaCrop image, threshold
+	return ImageAlphaCrop_2( GPData(image), threshold )
+
+func ImageAlphaPremultiply image
+	return ImageAlphaPremultiply_2( GPData(image) )
+
+func ImageResizeNN image, newWidth, newHeight
+	return ImageResizeNN_2( GPData(image), newWidth, newHeight )
+
+func ImageResizeCanvas image, newWidth, newHeight, offsetX, offsetY, color
+	return ImageResizeCanvas_2( GPData(image), newWidth, newHeight, offsetX, offsetY, GPData(color) )
+
+func ImageMipmaps image
+	return ImageMipmaps_2( GPData(image) )
+
+func ImageDither image, rBpp, gBpp, bBpp, aBpp
+	return ImageDither_2( GPData(image), rBpp, gBpp, bBpp, aBpp )
+
+func ImageExtractPalette image, maxPaletteSize, extractCount
+	oColor = new Color 
+	oColor.setData(ImageExtractPalette_2( GPData(image), maxPaletteSize, extractCount) )
+ 	return oColor
+
+func ImageText text, fontSize, color
+	oImage = new Image 
+	oImage.setData(ImageText_2( text, fontSize, GPData(color) ) )
+	return oImage
+
+func ImageTextEx font, text, fontSize, spacing, tint
+	oImage = new Image 
+	oImage.setData(ImageTextEx_2( GPData(font), text, fontSize, spacing, GPData(tint) ) )
+	return oImage
+
+func GenImageColor width,  height, color
+	oImage = new Image 
+	oImage.setData(GenImageColor_2( width,  height, GPData(color) ) )
+	return oImage
+
+func GenImageGradientV width, height, top, bottom
+	oImage = new Image 
+	oImage.setData(GenImageGradientV_2( width, height, GPData(top), GPData(bottom)) )
+	return oImage
+
+func GenImageGradientH width, height, left, right
+	oImage = new Image 
+	oImage.setData(GenImageGradientH_2( width, height, GPData(left), GPData(right) ) )
+	return oImage
+
+func GenImageGradientRadial width, height, density, inner, outer
+	oImage = new Image 
+	oImage.setData(GenImageGradientRadial_2( width, height, density, GPData(inner), GPData(outer) ) )
+	return oImage
+
+func GenImageChecked width, height, checksX, checksY, col1, col2
+	oImage = new Image 
+	oImage.setData(GenImageChecked_2( width, height, checksX, checksY, GPData(col1), GPData(col2) ) )
+	return oImage
+
+func GenImageWhiteNoise width, height, factor
+	oImage = new Image 
+	oImage.setData(GenImageWhiteNoise_2(width, height, factor))
+	return oImage
+
+func GenImagePerlinNoise width, height, offsetX, offsetY, scale
+	oImage = new Image 
+	oImage.setData(GenImagePerlinNoise_2( width, height, offsetX, offsetY, scale) )
+	return oImage
+
+func GenImageCellular width, height, tileSize
+	oImage = new Image 
+	oImage.setData(GenImageCellular_2( width, height, tileSize) )
+	return oImage
+
+func GenTextureMipmaps texture
+	return GenTextureMipmaps_2( GPData(texture) )
+
+func SetTextureFilter texture, filterMode
+	return SetTextureFilter_2( GPData(texture), filterMode )
+
+func SetTextureWrap texture, wrapMode
+	return SetTextureWrap_2( GPData(texture), wrapMode )
+
+func DrawTextureV texture, position, tint
+	return DrawTextureV_2( GPData(texture), GPData(position), GPData(tint) )
+
+func GetFontDefault
+	oFont = new Font 
+	oFont.setData(GetFontDefault_2())
+	return oFont
+
+func LoadFontEx fileName, fontSize, fontChars, charsCount
+	oFont = new Font 
+	oFont.setData(LoadFontEx_2( fileName, fontSize, fontChars, charsCount ) )
+	return oFont
+
+func LoadFontFromImage image, key, firstChar
+	oFont = new Font 
+	oFont.setData(LoadFontFromImage_2( GPData(image), GPData(key), firstChar) )
+	return oFont
+
+func LoadFontData fileName, fontSize, fontChars, charsCount, type
+	oCharInfo = new CharInfo
+	oCharInfo.setData(LoadFontData_2( fileName, fontSize, fontChars, charsCount, type) )
+	return oCharInfo
+
+func GenImageFontAtlas chars, charsCount, fontSize, padding, packMethod
+	oImage = new Image 
+	oImage.setData(GenImageFontAtlas_2( GPData(chars), charsCount, fontSize, padding, packMethod ) )
+	return oImage 
+
+func MeasureTextEx font, text, fontSize, spacing
+	oVector2 = new Vector2 
+	oVector2.setData(MeasureTextEx_2( GPData(font), text, fontSize, spacing ) )
+	return oVector2 
+
+func GetGlyphIndex font, character 
+	return GetGlyphIndex_2( GPData(font), character )
+
+func LoadModel fileName
+	oModel = new Model 
+	oModel.setData(LoadModel_2( fileName ) )
+	return oModel 
+
+func LoadModelFromMesh mesh
+	oModel = new Model 
+	oModel.setData(LoadModelFromMesh_2( GPData(mesh) ) )
+	return oModel 
+
+func UnloadModel model
+	return UnloadModel_2( GPData(model) )
+
+func LoadMeshes fileName, meshCount
+	oMesh = new Mesh 
+	oMesh.setData(LoadMeshes_2( fileName, meshCount ) )
+	return oMesh 
+
+func ExportMesh mesh, fileName
+	return ExportMesh_2( GPData(mesh), fileName )
+
+func UnloadMesh mesh
+	return UnloadMesh_2( GPData(mesh) )
+
+func LoadMaterials fileName, materialCount
+	oMaterial = new Material 
+	oMaterial.setData(LoadMaterials_2( fileName, materialCount ) )
+	return oMaterial
+
+func LoadMaterialDefault
+	oMaterial = new Material 
+	oMaterial.setData(LoadMaterialDefault_2())
+	return oMaterial
+
+func UnloadMaterial material
+	return UnloadMaterial_2( GPData(material) )
+
+func SetMaterialTexture material, mapType, texture
+	return SetMaterialTexture_2( GPData(material), mapType, GPData(texture) )
+
+func SetModelMeshMaterial model, meshId, materialId
+	return SetModelMeshMaterial_2( GPData(model), meshId, materialId )
+
+func LoadModelAnimations fileName, animsCount
+	oModelAnimation = new ModelAnimation
+	oModelAnimation.setData(LoadModelAnimations_2( fileName, animsCount ) )
+	return oModelAnimation
+
+func UpdateModelAnimation model, anim, frame
+	return UpdateModelAnimation_2( GPData(model), GPData(anim), frame )
+
+func UnloadModelAnimation anim
+	return UnloadModelAnimation_2( GPData(anim) )
+
+func IsModelAnimationValid model, anim
+	return IsModelAnimationValid_2( GPData(model), GPData(anim) )
+
+func GenMeshPoly sides, radius
+	oMesh = new Mesh 
+	oMesh.setData(GenMeshPoly_2( sides, radius ) )
+	return oMesh
+
+func GenMeshPlane width, length, resX, resZ
+	oMesh = new Mesh 
+	oMesh.setData(GenMeshPlane_2( width, length, resX, resZ ) )
+	return oMesh
+
+func GenMeshCube width, height, length
+	oMesh = new Mesh 
+	oMesh.setData(GenMeshCube_2( width, height, length ) ) 
+	return oMesh
+
+func GenMeshSphere radius, rings, slices
+	oMesh = new Mesh 
+	oMesh.setData(GenMeshSphere_2( radius, rings, slices ) )
+	return oMesh
+
+func GenMeshHemiSphere radius, rings, slices
+	oMesh = new Mesh 
+	oMesh.setData(GenMeshHemiSphere_2( radius, rings, slices ) )
+	return oMesh
+
+func GenMeshCylinder radius, height, slices
+	oMesh = new Mesh 
+	oMesh.setData(GenMeshCylinder_2( radius, height, slices ) )
+	return oMesh
+
+func GenMeshTorus radius, size, radSeg, sides
+	oMesh = new Mesh 
+	oMesh.setData(GenMeshTorus_2( radius, size, radSeg, sides ) )
+	return oMesh
+
+func GenMeshKnot radius, size, radSeg, sides
+	oMesh = new Mesh 
+	oMesh.setData(GenMeshKnot_2( radius, size, radSeg, sides ) )
+	return oMesh
+
+func MeshBoundingBox mesh
+	oBoundingBox = new BoundingBox
+	oBoundingBox.setData(MeshBoundingBox_2( GPData(mesh) ))
+	return oBoundingBox
+
+func MeshTangents mesh
+	return MeshTangents_2( GPData(mesh) )
+
+func MeshBinormals mesh
+	return MeshBinormals_2( GPData(mesh) )
+
+func DrawBoundingBox box, color
+	return DrawBoundingBox_2( GPData(box), GPData(color) )
+
+func CheckCollisionBoxes box1, box2
+	return CheckCollisionBoxes_2( GPData(box1), GPData(box2) )
+
+func GetCollisionRayModel ray, model
+	oRayHitInfo = new RayHitInfo
+	oRayHitInfo.setData(GetCollisionRayModel_2( GPData(ray), GPData(model) ) )
+	return oRayHitInfo
+
+func GetCollisionRayGround ray, groundHeight
+	oRayHitInfo = new RayHitInfo
+	oRayHitInfo.setData(GetCollisionRayGround_2( GPData(ray), groundHeight ) )
+	return oRayHitInfo
