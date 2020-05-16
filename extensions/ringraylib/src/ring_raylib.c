@@ -14797,7 +14797,7 @@ RING_FUNC(ring_LoadText)
 }
 
 
-RING_FUNC(ring_LoadShader)
+RING_FUNC(ring_LoadShader_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -14820,7 +14820,7 @@ RING_FUNC(ring_LoadShader)
 }
 
 
-RING_FUNC(ring_LoadShaderCode)
+RING_FUNC(ring_LoadShaderCode_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -14843,7 +14843,7 @@ RING_FUNC(ring_LoadShaderCode)
 }
 
 
-RING_FUNC(ring_UnloadShader)
+RING_FUNC(ring_UnloadShader_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -14855,7 +14855,7 @@ RING_FUNC(ring_UnloadShader)
 }
 
 
-RING_FUNC(ring_GetShaderDefault)
+RING_FUNC(ring_GetShaderDefault_2)
 {
 	if ( RING_API_PARACOUNT != 0 ) {
 		RING_API_ERROR(RING_API_BADPARACOUNT);
@@ -14870,7 +14870,7 @@ RING_FUNC(ring_GetShaderDefault)
 }
 
 
-RING_FUNC(ring_GetTextureDefault)
+RING_FUNC(ring_GetTextureDefault_2)
 {
 	if ( RING_API_PARACOUNT != 0 ) {
 		RING_API_ERROR(RING_API_BADPARACOUNT);
@@ -14885,7 +14885,7 @@ RING_FUNC(ring_GetTextureDefault)
 }
 
 
-RING_FUNC(ring_GetShaderLocation)
+RING_FUNC(ring_GetShaderLocation_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -14901,7 +14901,7 @@ RING_FUNC(ring_GetShaderLocation)
 }
 
 
-RING_FUNC(ring_SetShaderValue)
+RING_FUNC(ring_SetShaderValue_2)
 {
 	if ( RING_API_PARACOUNT != 4 ) {
 		RING_API_ERROR(RING_API_MISS4PARA);
@@ -14925,7 +14925,7 @@ RING_FUNC(ring_SetShaderValue)
 }
 
 
-RING_FUNC(ring_SetShaderValueV)
+RING_FUNC(ring_SetShaderValueV_2)
 {
 	if ( RING_API_PARACOUNT != 5 ) {
 		RING_API_ERROR(RING_API_BADPARACOUNT);
@@ -14953,7 +14953,7 @@ RING_FUNC(ring_SetShaderValueV)
 }
 
 
-RING_FUNC(ring_SetShaderValueMatrix)
+RING_FUNC(ring_SetShaderValueMatrix_2)
 {
 	if ( RING_API_PARACOUNT != 3 ) {
 		RING_API_ERROR(RING_API_MISS3PARA);
@@ -14971,7 +14971,7 @@ RING_FUNC(ring_SetShaderValueMatrix)
 }
 
 
-RING_FUNC(ring_SetShaderValueTexture)
+RING_FUNC(ring_SetShaderValueTexture_2)
 {
 	if ( RING_API_PARACOUNT != 3 ) {
 		RING_API_ERROR(RING_API_MISS3PARA);
@@ -14989,7 +14989,7 @@ RING_FUNC(ring_SetShaderValueTexture)
 }
 
 
-RING_FUNC(ring_SetMatrixProjection)
+RING_FUNC(ring_SetMatrixProjection_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15001,7 +15001,7 @@ RING_FUNC(ring_SetMatrixProjection)
 }
 
 
-RING_FUNC(ring_SetMatrixModelview)
+RING_FUNC(ring_SetMatrixModelview_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15013,7 +15013,7 @@ RING_FUNC(ring_SetMatrixModelview)
 }
 
 
-RING_FUNC(ring_GetMatrixModelview)
+RING_FUNC(ring_GetMatrixModelview_2)
 {
 	if ( RING_API_PARACOUNT != 0 ) {
 		RING_API_ERROR(RING_API_BADPARACOUNT);
@@ -15028,7 +15028,7 @@ RING_FUNC(ring_GetMatrixModelview)
 }
 
 
-RING_FUNC(ring_GenTextureCubemap)
+RING_FUNC(ring_GenTextureCubemap_2)
 {
 	if ( RING_API_PARACOUNT != 3 ) {
 		RING_API_ERROR(RING_API_MISS3PARA);
@@ -15051,7 +15051,7 @@ RING_FUNC(ring_GenTextureCubemap)
 }
 
 
-RING_FUNC(ring_GenTextureIrradiance)
+RING_FUNC(ring_GenTextureIrradiance_2)
 {
 	if ( RING_API_PARACOUNT != 3 ) {
 		RING_API_ERROR(RING_API_MISS3PARA);
@@ -15074,7 +15074,7 @@ RING_FUNC(ring_GenTextureIrradiance)
 }
 
 
-RING_FUNC(ring_GenTexturePrefilter)
+RING_FUNC(ring_GenTexturePrefilter_2)
 {
 	if ( RING_API_PARACOUNT != 3 ) {
 		RING_API_ERROR(RING_API_MISS3PARA);
@@ -15097,7 +15097,7 @@ RING_FUNC(ring_GenTexturePrefilter)
 }
 
 
-RING_FUNC(ring_GenTextureBRDF)
+RING_FUNC(ring_GenTextureBRDF_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -15118,7 +15118,7 @@ RING_FUNC(ring_GenTextureBRDF)
 }
 
 
-RING_FUNC(ring_BeginShaderMode)
+RING_FUNC(ring_BeginShaderMode_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15234,7 +15234,7 @@ RING_FUNC(ring_UpdateVrTracking_2)
 }
 
 
-RING_FUNC(ring_SetVrConfiguration)
+RING_FUNC(ring_SetVrConfiguration_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -15667,7 +15667,7 @@ RING_FUNC(ring_GetWaveData_2)
 }
 
 
-RING_FUNC(ring_LoadMusicStream)
+RING_FUNC(ring_LoadMusicStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15686,7 +15686,7 @@ RING_FUNC(ring_LoadMusicStream)
 }
 
 
-RING_FUNC(ring_UnloadMusicStream)
+RING_FUNC(ring_UnloadMusicStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15698,7 +15698,7 @@ RING_FUNC(ring_UnloadMusicStream)
 }
 
 
-RING_FUNC(ring_PlayMusicStream)
+RING_FUNC(ring_PlayMusicStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15710,7 +15710,7 @@ RING_FUNC(ring_PlayMusicStream)
 }
 
 
-RING_FUNC(ring_UpdateMusicStream)
+RING_FUNC(ring_UpdateMusicStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15722,7 +15722,7 @@ RING_FUNC(ring_UpdateMusicStream)
 }
 
 
-RING_FUNC(ring_StopMusicStream)
+RING_FUNC(ring_StopMusicStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15734,7 +15734,7 @@ RING_FUNC(ring_StopMusicStream)
 }
 
 
-RING_FUNC(ring_PauseMusicStream)
+RING_FUNC(ring_PauseMusicStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15746,7 +15746,7 @@ RING_FUNC(ring_PauseMusicStream)
 }
 
 
-RING_FUNC(ring_ResumeMusicStream)
+RING_FUNC(ring_ResumeMusicStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15758,7 +15758,7 @@ RING_FUNC(ring_ResumeMusicStream)
 }
 
 
-RING_FUNC(ring_IsMusicPlaying)
+RING_FUNC(ring_IsMusicPlaying_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15770,7 +15770,7 @@ RING_FUNC(ring_IsMusicPlaying)
 }
 
 
-RING_FUNC(ring_SetMusicVolume)
+RING_FUNC(ring_SetMusicVolume_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -15786,7 +15786,7 @@ RING_FUNC(ring_SetMusicVolume)
 }
 
 
-RING_FUNC(ring_SetMusicPitch)
+RING_FUNC(ring_SetMusicPitch_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -15802,7 +15802,7 @@ RING_FUNC(ring_SetMusicPitch)
 }
 
 
-RING_FUNC(ring_SetMusicLoopCount)
+RING_FUNC(ring_SetMusicLoopCount_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -15818,7 +15818,7 @@ RING_FUNC(ring_SetMusicLoopCount)
 }
 
 
-RING_FUNC(ring_GetMusicTimeLength)
+RING_FUNC(ring_GetMusicTimeLength_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15830,7 +15830,7 @@ RING_FUNC(ring_GetMusicTimeLength)
 }
 
 
-RING_FUNC(ring_GetMusicTimePlayed)
+RING_FUNC(ring_GetMusicTimePlayed_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15842,7 +15842,7 @@ RING_FUNC(ring_GetMusicTimePlayed)
 }
 
 
-RING_FUNC(ring_InitAudioStream)
+RING_FUNC(ring_InitAudioStream_2)
 {
 	if ( RING_API_PARACOUNT != 3 ) {
 		RING_API_ERROR(RING_API_MISS3PARA);
@@ -15869,7 +15869,7 @@ RING_FUNC(ring_InitAudioStream)
 }
 
 
-RING_FUNC(ring_UpdateAudioStream)
+RING_FUNC(ring_UpdateAudioStream_2)
 {
 	if ( RING_API_PARACOUNT != 3 ) {
 		RING_API_ERROR(RING_API_MISS3PARA);
@@ -15889,7 +15889,7 @@ RING_FUNC(ring_UpdateAudioStream)
 }
 
 
-RING_FUNC(ring_CloseAudioStream)
+RING_FUNC(ring_CloseAudioStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15901,7 +15901,7 @@ RING_FUNC(ring_CloseAudioStream)
 }
 
 
-RING_FUNC(ring_IsAudioBufferProcessed)
+RING_FUNC(ring_IsAudioBufferProcessed_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15913,7 +15913,7 @@ RING_FUNC(ring_IsAudioBufferProcessed)
 }
 
 
-RING_FUNC(ring_PlayAudioStream)
+RING_FUNC(ring_PlayAudioStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15925,7 +15925,7 @@ RING_FUNC(ring_PlayAudioStream)
 }
 
 
-RING_FUNC(ring_PauseAudioStream)
+RING_FUNC(ring_PauseAudioStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15937,7 +15937,7 @@ RING_FUNC(ring_PauseAudioStream)
 }
 
 
-RING_FUNC(ring_ResumeAudioStream)
+RING_FUNC(ring_ResumeAudioStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15949,7 +15949,7 @@ RING_FUNC(ring_ResumeAudioStream)
 }
 
 
-RING_FUNC(ring_IsAudioStreamPlaying)
+RING_FUNC(ring_IsAudioStreamPlaying_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15961,7 +15961,7 @@ RING_FUNC(ring_IsAudioStreamPlaying)
 }
 
 
-RING_FUNC(ring_StopAudioStream)
+RING_FUNC(ring_StopAudioStream_2)
 {
 	if ( RING_API_PARACOUNT != 1 ) {
 		RING_API_ERROR(RING_API_MISS1PARA);
@@ -15973,7 +15973,7 @@ RING_FUNC(ring_StopAudioStream)
 }
 
 
-RING_FUNC(ring_SetAudioStreamVolume)
+RING_FUNC(ring_SetAudioStreamVolume_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -15989,7 +15989,7 @@ RING_FUNC(ring_SetAudioStreamVolume)
 }
 
 
-RING_FUNC(ring_SetAudioStreamPitch)
+RING_FUNC(ring_SetAudioStreamPitch_2)
 {
 	if ( RING_API_PARACOUNT != 2 ) {
 		RING_API_ERROR(RING_API_MISS2PARA);
@@ -17230,24 +17230,24 @@ RING_API void ringlib_init(RingState *pRingState)
 	ring_vm_funcregister("getcollisionraytriangle_2",ring_GetCollisionRayTriangle_2);
 	ring_vm_funcregister("getcollisionrayground_2",ring_GetCollisionRayGround_2);
 	ring_vm_funcregister("loadtext",ring_LoadText);
-	ring_vm_funcregister("loadshader",ring_LoadShader);
-	ring_vm_funcregister("loadshadercode",ring_LoadShaderCode);
-	ring_vm_funcregister("unloadshader",ring_UnloadShader);
-	ring_vm_funcregister("getshaderdefault",ring_GetShaderDefault);
-	ring_vm_funcregister("gettexturedefault",ring_GetTextureDefault);
-	ring_vm_funcregister("getshaderlocation",ring_GetShaderLocation);
-	ring_vm_funcregister("setshadervalue",ring_SetShaderValue);
-	ring_vm_funcregister("setshadervaluev",ring_SetShaderValueV);
-	ring_vm_funcregister("setshadervaluematrix",ring_SetShaderValueMatrix);
-	ring_vm_funcregister("setshadervaluetexture",ring_SetShaderValueTexture);
-	ring_vm_funcregister("setmatrixprojection",ring_SetMatrixProjection);
-	ring_vm_funcregister("setmatrixmodelview",ring_SetMatrixModelview);
-	ring_vm_funcregister("getmatrixmodelview",ring_GetMatrixModelview);
-	ring_vm_funcregister("gentexturecubemap",ring_GenTextureCubemap);
-	ring_vm_funcregister("gentextureirradiance",ring_GenTextureIrradiance);
-	ring_vm_funcregister("gentextureprefilter",ring_GenTexturePrefilter);
-	ring_vm_funcregister("gentexturebrdf",ring_GenTextureBRDF);
-	ring_vm_funcregister("beginshadermode",ring_BeginShaderMode);
+	ring_vm_funcregister("loadshader_2",ring_LoadShader_2);
+	ring_vm_funcregister("loadshadercode_2",ring_LoadShaderCode_2);
+	ring_vm_funcregister("unloadshader_2",ring_UnloadShader_2);
+	ring_vm_funcregister("getshaderdefault_2",ring_GetShaderDefault_2);
+	ring_vm_funcregister("gettexturedefault_2",ring_GetTextureDefault_2);
+	ring_vm_funcregister("getshaderlocation_2",ring_GetShaderLocation_2);
+	ring_vm_funcregister("setshadervalue_2",ring_SetShaderValue_2);
+	ring_vm_funcregister("setshadervaluev_2",ring_SetShaderValueV_2);
+	ring_vm_funcregister("setshadervaluematrix_2",ring_SetShaderValueMatrix_2);
+	ring_vm_funcregister("setshadervaluetexture_2",ring_SetShaderValueTexture_2);
+	ring_vm_funcregister("setmatrixprojection_2",ring_SetMatrixProjection_2);
+	ring_vm_funcregister("setmatrixmodelview_2",ring_SetMatrixModelview_2);
+	ring_vm_funcregister("getmatrixmodelview_2",ring_GetMatrixModelview_2);
+	ring_vm_funcregister("gentexturecubemap_2",ring_GenTextureCubemap_2);
+	ring_vm_funcregister("gentextureirradiance_2",ring_GenTextureIrradiance_2);
+	ring_vm_funcregister("gentextureprefilter_2",ring_GenTexturePrefilter_2);
+	ring_vm_funcregister("gentexturebrdf_2",ring_GenTextureBRDF_2);
+	ring_vm_funcregister("beginshadermode_2",ring_BeginShaderMode_2);
 	ring_vm_funcregister("endshadermode",ring_EndShaderMode);
 	ring_vm_funcregister("beginblendmode",ring_BeginBlendMode);
 	ring_vm_funcregister("endblendmode",ring_EndBlendMode);
@@ -17256,7 +17256,7 @@ RING_API void ringlib_init(RingState *pRingState)
 	ring_vm_funcregister("initvrsimulator",ring_InitVrSimulator);
 	ring_vm_funcregister("closevrsimulator",ring_CloseVrSimulator);
 	ring_vm_funcregister("updatevrtracking_2",ring_UpdateVrTracking_2);
-	ring_vm_funcregister("setvrconfiguration",ring_SetVrConfiguration);
+	ring_vm_funcregister("setvrconfiguration_2",ring_SetVrConfiguration_2);
 	ring_vm_funcregister("isvrsimulatorready",ring_IsVrSimulatorReady);
 	ring_vm_funcregister("togglevrmode",ring_ToggleVrMode);
 	ring_vm_funcregister("beginvrdrawing",ring_BeginVrDrawing);
@@ -17285,30 +17285,30 @@ RING_API void ringlib_init(RingState *pRingState)
 	ring_vm_funcregister("wavecopy_2",ring_WaveCopy_2);
 	ring_vm_funcregister("wavecrop_2",ring_WaveCrop_2);
 	ring_vm_funcregister("getwavedata_2",ring_GetWaveData_2);
-	ring_vm_funcregister("loadmusicstream",ring_LoadMusicStream);
-	ring_vm_funcregister("unloadmusicstream",ring_UnloadMusicStream);
-	ring_vm_funcregister("playmusicstream",ring_PlayMusicStream);
-	ring_vm_funcregister("updatemusicstream",ring_UpdateMusicStream);
-	ring_vm_funcregister("stopmusicstream",ring_StopMusicStream);
-	ring_vm_funcregister("pausemusicstream",ring_PauseMusicStream);
-	ring_vm_funcregister("resumemusicstream",ring_ResumeMusicStream);
-	ring_vm_funcregister("ismusicplaying",ring_IsMusicPlaying);
-	ring_vm_funcregister("setmusicvolume",ring_SetMusicVolume);
-	ring_vm_funcregister("setmusicpitch",ring_SetMusicPitch);
-	ring_vm_funcregister("setmusicloopcount",ring_SetMusicLoopCount);
-	ring_vm_funcregister("getmusictimelength",ring_GetMusicTimeLength);
-	ring_vm_funcregister("getmusictimeplayed",ring_GetMusicTimePlayed);
-	ring_vm_funcregister("initaudiostream",ring_InitAudioStream);
-	ring_vm_funcregister("updateaudiostream",ring_UpdateAudioStream);
-	ring_vm_funcregister("closeaudiostream",ring_CloseAudioStream);
-	ring_vm_funcregister("isaudiobufferprocessed",ring_IsAudioBufferProcessed);
-	ring_vm_funcregister("playaudiostream",ring_PlayAudioStream);
-	ring_vm_funcregister("pauseaudiostream",ring_PauseAudioStream);
-	ring_vm_funcregister("resumeaudiostream",ring_ResumeAudioStream);
-	ring_vm_funcregister("isaudiostreamplaying",ring_IsAudioStreamPlaying);
-	ring_vm_funcregister("stopaudiostream",ring_StopAudioStream);
-	ring_vm_funcregister("setaudiostreamvolume",ring_SetAudioStreamVolume);
-	ring_vm_funcregister("setaudiostreampitch",ring_SetAudioStreamPitch);
+	ring_vm_funcregister("loadmusicstream_2",ring_LoadMusicStream_2);
+	ring_vm_funcregister("unloadmusicstream_2",ring_UnloadMusicStream_2);
+	ring_vm_funcregister("playmusicstream_2",ring_PlayMusicStream_2);
+	ring_vm_funcregister("updatemusicstream_2",ring_UpdateMusicStream_2);
+	ring_vm_funcregister("stopmusicstream_2",ring_StopMusicStream_2);
+	ring_vm_funcregister("pausemusicstream_2",ring_PauseMusicStream_2);
+	ring_vm_funcregister("resumemusicstream_2",ring_ResumeMusicStream_2);
+	ring_vm_funcregister("ismusicplaying_2",ring_IsMusicPlaying_2);
+	ring_vm_funcregister("setmusicvolume_2",ring_SetMusicVolume_2);
+	ring_vm_funcregister("setmusicpitch_2",ring_SetMusicPitch_2);
+	ring_vm_funcregister("setmusicloopcount_2",ring_SetMusicLoopCount_2);
+	ring_vm_funcregister("getmusictimelength_2",ring_GetMusicTimeLength_2);
+	ring_vm_funcregister("getmusictimeplayed_2",ring_GetMusicTimePlayed_2);
+	ring_vm_funcregister("initaudiostream_2",ring_InitAudioStream_2);
+	ring_vm_funcregister("updateaudiostream_2",ring_UpdateAudioStream_2);
+	ring_vm_funcregister("closeaudiostream_2",ring_CloseAudioStream_2);
+	ring_vm_funcregister("isaudiobufferprocessed_2",ring_IsAudioBufferProcessed_2);
+	ring_vm_funcregister("playaudiostream_2",ring_PlayAudioStream_2);
+	ring_vm_funcregister("pauseaudiostream_2",ring_PauseAudioStream_2);
+	ring_vm_funcregister("resumeaudiostream_2",ring_ResumeAudioStream_2);
+	ring_vm_funcregister("isaudiostreamplaying_2",ring_IsAudioStreamPlaying_2);
+	ring_vm_funcregister("stopaudiostream_2",ring_StopAudioStream_2);
+	ring_vm_funcregister("setaudiostreamvolume_2",ring_SetAudioStreamVolume_2);
+	ring_vm_funcregister("setaudiostreampitch_2",ring_SetAudioStreamPitch_2);
 	ring_vm_funcregister("guienable",ring_GuiEnable);
 	ring_vm_funcregister("guidisable",ring_GuiDisable);
 	ring_vm_funcregister("guilock",ring_GuiLock);

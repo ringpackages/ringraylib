@@ -1057,3 +1057,154 @@ func GetCollisionRayGround ray, groundHeight
 	oRayHitInfo = new RayHitInfo
 	oRayHitInfo.setData(GetCollisionRayGround_2( GPData(ray), groundHeight ) )
 	return oRayHitInfo
+
+func LoadShader vsFileName, fsFileName
+	oShader = new Shader 
+	oShader.setData(LoadShader_2( vsFileName, fsFileName ))
+	return oShader 
+
+func LoadShaderCode vsCode, fsCode
+	oShader = new Shader 
+	oShader.setData(LoadShaderCode_2( vsCode, fsCode ))
+	return oShader 
+
+func UnloadShader shader
+	return UnloadShader_2( GPData(shader) )
+
+func GetShaderDefault
+	oShader = new Shader 
+	oShader.setData(GetShaderDefault_2())
+	return oShader 
+
+func GetTextureDefault
+	oTexture2D = new Texture2D
+	oTexture2D.setData(GetTextureDefault_2())
+	return oTexture2D
+
+func GetShaderLocation shader, uniformName
+	return GetShaderLocation_2( GPData(shader), uniformName )
+
+func SetShaderValue shader, uniformLoc, value, uniformType
+	return SetShaderValue_2( GPData(shader), uniformLoc, value, uniformType )
+
+func SetShaderValueV shader, uniformLoc, value, uniformType, count
+	return SetShaderValueV_2( GPData(shader), uniformLoc, value, uniformType, count )
+
+func SetShaderValueMatrix shader, uniformLoc, mat
+	return SetShaderValueMatrix_2( GPData(shader), uniformLoc, GPData(mat) )
+
+func SetShaderValueTexture shader, uniformLoc, texture
+	return SetShaderValueTexture_2( GPData(shader), uniformLoc, GPData(texture) )
+
+func SetMatrixProjection proj
+	return SetMatrixProjection_2( GPData(proj) )
+
+func SetMatrixModelview view
+	return SetMatrixModelview_2( GPData(view) )
+
+func GetMatrixModelview
+	oMatrix = new Matrix
+	oMatrix.setData(GetMatrixModelview_2())
+	return oMatrix
+
+func GenTextureCubemap shader, skyHDR, size
+	oTexture2D = new Texture2D
+	oTexture2D.setData(GenTextureCubemap_2( GPdata(shader), GPData(skyHDR), size ))
+	return oTexture2D
+
+func GenTextureIrradiance shader, cubemap, size
+	oTexture2D = new Texture2D
+	oTexture2D.setData(GenTextureIrradiance_2( GPData(shader), GPData(cubemap), size ))
+	return oTexture2D
+
+func GenTexturePrefilter shader, cubemap, size
+	oTexture2D = new Texture2D
+	oTexture2D.setData(GenTexturePrefilter_2( GPData(shader), GPData(cubemap), size ) )
+	return oTexture2D
+
+func GenTextureBRDF shader, size
+	oTexture2D = new Texture2D
+	oTexture2D.setData(GenTextureBRDF_2( GPData(shader), size ) )
+	return oTexture2D
+
+func BeginShaderMode shader
+	return BeginShaderMode_2( GPData(shader) )
+
+func SetVrConfiguration info, distortion
+	return SetVrConfiguration_2( GPData(info), GPData(distortion) )
+
+func LoadMusicStream fileName
+	oMusic = new Music
+	oMusic.setData(LoadMusicStream_2( fileName ))
+	return oMusic
+
+func UnloadMusicStream music
+	return UnloadMusicStream_2( GPData(music) )
+
+func PlayMusicStream music
+	return PlayMusicStream_2( GPData(music) )
+
+func UpdateMusicStream music
+	return UpdateMusicStream_2( GPData(music) )
+
+func StopMusicStream music
+	return StopMusicStream_2( GPData(music) )
+
+func PauseMusicStream music
+	return PauseMusicStream_2( GPData(music) )
+
+func ResumeMusicStream music
+	return ResumeMusicStream_2( GPData(music) )
+
+func IsMusicPlaying music
+	return IsMusicPlaying_2( GPData(music) )
+
+func SetMusicVolume music, volume
+	return SetMusicVolume_2( GPData(music), volume )
+
+func SetMusicPitch music, pitch
+	return SetMusicPitch_2( GPData(music), pitch )
+
+func SetMusicLoopCount music, count
+	return SetMusicLoopCount_2( GPData(music), count )
+
+func GetMusicTimeLength music
+	return GetMusicTimeLength_2( GPData(music) )
+
+func GetMusicTimePlayed music 
+	return GetMusicTimePlayed_2( GPData(music) )
+
+func InitAudioStream sampleRate, sampleSize, channels
+	oAudioStream = new AudioStream
+	oAudioStream.setData(InitAudioStream_2( sampleRate, sampleSize, channels ))
+	return oAudioStream
+
+func UpdateAudioStream stream, data, samplesCount
+	return UpdateAudioStream_2( GPData(stream), data, samplesCount )
+
+func CloseAudioStream stream
+	return CloseAudioStream_2( GPData(stream) )
+
+func IsAudioBufferProcessed stream
+	return IsAudioBufferProcessed_2( GPData(stream) )
+
+func PlayAudioStream stream
+	return PlayAudioStream_2( GPData(stream) )
+
+func PauseAudioStream stream
+	return PauseAudioStream_2( GPData(stream) )
+
+func ResumeAudioStream stream
+	return ResumeAudioStream_2( GPData(stream) )
+
+func IsAudioStreamPlaying stream
+	return IsAudioStreamPlaying_2( GPData(stream) )
+
+func StopAudioStream stream
+	return StopAudioStream_2( GPData(stream) )
+
+func SetAudioStreamVolume stream, volume
+	return SetAudioStreamVolume_2( GPData(stream), volume )
+
+func SetAudioStreamPitch stream, pitch
+	return SetAudioStreamPitch_2( GPData(stream), pitch )
