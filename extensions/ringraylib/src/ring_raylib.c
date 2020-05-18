@@ -6,6 +6,7 @@
 #include <raylib.h>
 #define RAYGUI_IMPLEMENTATION
 #include "raygui/raygui.h"
+#include "raymath/raymath.h"
 
 RING_FUNC(ring_raylib_new_vector2)
 {
@@ -38,7 +39,7 @@ RING_FUNC(ring_raylib_destroy_vector2)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -56,7 +57,7 @@ RING_FUNC(ring_raylib_get_vector2_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -71,7 +72,7 @@ RING_FUNC(ring_raylib_set_vector2_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -90,7 +91,7 @@ RING_FUNC(ring_raylib_get_vector2_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -105,7 +106,7 @@ RING_FUNC(ring_raylib_set_vector2_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -148,7 +149,7 @@ RING_FUNC(ring_raylib_destroy_vector3)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -166,7 +167,7 @@ RING_FUNC(ring_raylib_get_vector3_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -181,7 +182,7 @@ RING_FUNC(ring_raylib_set_vector3_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -200,7 +201,7 @@ RING_FUNC(ring_raylib_get_vector3_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -215,7 +216,7 @@ RING_FUNC(ring_raylib_set_vector3_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -234,7 +235,7 @@ RING_FUNC(ring_raylib_get_vector3_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -249,7 +250,7 @@ RING_FUNC(ring_raylib_set_vector3_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -292,7 +293,7 @@ RING_FUNC(ring_raylib_destroy_vector4)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -310,7 +311,7 @@ RING_FUNC(ring_raylib_get_vector4_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -325,7 +326,7 @@ RING_FUNC(ring_raylib_set_vector4_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -344,7 +345,7 @@ RING_FUNC(ring_raylib_get_vector4_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -359,7 +360,7 @@ RING_FUNC(ring_raylib_set_vector4_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -378,7 +379,7 @@ RING_FUNC(ring_raylib_get_vector4_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -393,7 +394,7 @@ RING_FUNC(ring_raylib_set_vector4_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -412,7 +413,7 @@ RING_FUNC(ring_raylib_get_vector4_w)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -427,7 +428,7 @@ RING_FUNC(ring_raylib_set_vector4_w)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -470,7 +471,7 @@ RING_FUNC(ring_raylib_destroy_quaternion)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -488,7 +489,7 @@ RING_FUNC(ring_raylib_get_quaternion_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -503,7 +504,7 @@ RING_FUNC(ring_raylib_set_quaternion_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -522,7 +523,7 @@ RING_FUNC(ring_raylib_get_quaternion_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -537,7 +538,7 @@ RING_FUNC(ring_raylib_set_quaternion_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -556,7 +557,7 @@ RING_FUNC(ring_raylib_get_quaternion_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -571,7 +572,7 @@ RING_FUNC(ring_raylib_set_quaternion_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -590,7 +591,7 @@ RING_FUNC(ring_raylib_get_quaternion_w)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -605,7 +606,7 @@ RING_FUNC(ring_raylib_set_quaternion_w)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -648,7 +649,7 @@ RING_FUNC(ring_raylib_destroy_matrix)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -666,7 +667,7 @@ RING_FUNC(ring_raylib_get_matrix_m0)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -681,7 +682,7 @@ RING_FUNC(ring_raylib_set_matrix_m0)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -700,7 +701,7 @@ RING_FUNC(ring_raylib_get_matrix_m1)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -715,7 +716,7 @@ RING_FUNC(ring_raylib_set_matrix_m1)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -734,7 +735,7 @@ RING_FUNC(ring_raylib_get_matrix_m2)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -749,7 +750,7 @@ RING_FUNC(ring_raylib_set_matrix_m2)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -768,7 +769,7 @@ RING_FUNC(ring_raylib_get_matrix_m3)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -783,7 +784,7 @@ RING_FUNC(ring_raylib_set_matrix_m3)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -802,7 +803,7 @@ RING_FUNC(ring_raylib_get_matrix_m4)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -817,7 +818,7 @@ RING_FUNC(ring_raylib_set_matrix_m4)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -836,7 +837,7 @@ RING_FUNC(ring_raylib_get_matrix_m5)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -851,7 +852,7 @@ RING_FUNC(ring_raylib_set_matrix_m5)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -870,7 +871,7 @@ RING_FUNC(ring_raylib_get_matrix_m6)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -885,7 +886,7 @@ RING_FUNC(ring_raylib_set_matrix_m6)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -904,7 +905,7 @@ RING_FUNC(ring_raylib_get_matrix_m7)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -919,7 +920,7 @@ RING_FUNC(ring_raylib_set_matrix_m7)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -938,7 +939,7 @@ RING_FUNC(ring_raylib_get_matrix_m8)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -953,7 +954,7 @@ RING_FUNC(ring_raylib_set_matrix_m8)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -972,7 +973,7 @@ RING_FUNC(ring_raylib_get_matrix_m9)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -987,7 +988,7 @@ RING_FUNC(ring_raylib_set_matrix_m9)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1006,7 +1007,7 @@ RING_FUNC(ring_raylib_get_matrix_m10)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1021,7 +1022,7 @@ RING_FUNC(ring_raylib_set_matrix_m10)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1040,7 +1041,7 @@ RING_FUNC(ring_raylib_get_matrix_m11)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1055,7 +1056,7 @@ RING_FUNC(ring_raylib_set_matrix_m11)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1074,7 +1075,7 @@ RING_FUNC(ring_raylib_get_matrix_m12)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1089,7 +1090,7 @@ RING_FUNC(ring_raylib_set_matrix_m12)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1108,7 +1109,7 @@ RING_FUNC(ring_raylib_get_matrix_m13)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1123,7 +1124,7 @@ RING_FUNC(ring_raylib_set_matrix_m13)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1142,7 +1143,7 @@ RING_FUNC(ring_raylib_get_matrix_m14)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1157,7 +1158,7 @@ RING_FUNC(ring_raylib_set_matrix_m14)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1176,7 +1177,7 @@ RING_FUNC(ring_raylib_get_matrix_m15)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1191,7 +1192,7 @@ RING_FUNC(ring_raylib_set_matrix_m15)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1234,7 +1235,7 @@ RING_FUNC(ring_raylib_destroy_color)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1252,7 +1253,7 @@ RING_FUNC(ring_raylib_get_color_r)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1267,7 +1268,7 @@ RING_FUNC(ring_raylib_set_color_r)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1286,7 +1287,7 @@ RING_FUNC(ring_raylib_get_color_g)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1301,7 +1302,7 @@ RING_FUNC(ring_raylib_set_color_g)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1320,7 +1321,7 @@ RING_FUNC(ring_raylib_get_color_b)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1335,7 +1336,7 @@ RING_FUNC(ring_raylib_set_color_b)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1354,7 +1355,7 @@ RING_FUNC(ring_raylib_get_color_a)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1369,7 +1370,7 @@ RING_FUNC(ring_raylib_set_color_a)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1412,7 +1413,7 @@ RING_FUNC(ring_raylib_destroy_rectangle)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1430,7 +1431,7 @@ RING_FUNC(ring_raylib_get_rectangle_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1445,7 +1446,7 @@ RING_FUNC(ring_raylib_set_rectangle_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1464,7 +1465,7 @@ RING_FUNC(ring_raylib_get_rectangle_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1479,7 +1480,7 @@ RING_FUNC(ring_raylib_set_rectangle_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1498,7 +1499,7 @@ RING_FUNC(ring_raylib_get_rectangle_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1513,7 +1514,7 @@ RING_FUNC(ring_raylib_set_rectangle_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1532,7 +1533,7 @@ RING_FUNC(ring_raylib_get_rectangle_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1547,7 +1548,7 @@ RING_FUNC(ring_raylib_set_rectangle_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1590,7 +1591,7 @@ RING_FUNC(ring_raylib_destroy_image)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1608,7 +1609,7 @@ RING_FUNC(ring_raylib_get_image_data)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1623,11 +1624,11 @@ RING_FUNC(ring_raylib_set_image_data)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1642,7 +1643,7 @@ RING_FUNC(ring_raylib_get_image_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1657,7 +1658,7 @@ RING_FUNC(ring_raylib_set_image_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1676,7 +1677,7 @@ RING_FUNC(ring_raylib_get_image_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1691,7 +1692,7 @@ RING_FUNC(ring_raylib_set_image_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1710,7 +1711,7 @@ RING_FUNC(ring_raylib_get_image_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1725,7 +1726,7 @@ RING_FUNC(ring_raylib_set_image_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1744,7 +1745,7 @@ RING_FUNC(ring_raylib_get_image_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1759,7 +1760,7 @@ RING_FUNC(ring_raylib_set_image_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1802,7 +1803,7 @@ RING_FUNC(ring_raylib_destroy_texture2d)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1820,7 +1821,7 @@ RING_FUNC(ring_raylib_get_texture2d_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1835,7 +1836,7 @@ RING_FUNC(ring_raylib_set_texture2d_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1854,7 +1855,7 @@ RING_FUNC(ring_raylib_get_texture2d_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1869,7 +1870,7 @@ RING_FUNC(ring_raylib_set_texture2d_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1888,7 +1889,7 @@ RING_FUNC(ring_raylib_get_texture2d_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1903,7 +1904,7 @@ RING_FUNC(ring_raylib_set_texture2d_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1922,7 +1923,7 @@ RING_FUNC(ring_raylib_get_texture2d_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1937,7 +1938,7 @@ RING_FUNC(ring_raylib_set_texture2d_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1956,7 +1957,7 @@ RING_FUNC(ring_raylib_get_texture2d_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -1971,7 +1972,7 @@ RING_FUNC(ring_raylib_set_texture2d_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2014,7 +2015,7 @@ RING_FUNC(ring_raylib_destroy_texture)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2032,7 +2033,7 @@ RING_FUNC(ring_raylib_get_texture_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2047,7 +2048,7 @@ RING_FUNC(ring_raylib_set_texture_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2066,7 +2067,7 @@ RING_FUNC(ring_raylib_get_texture_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2081,7 +2082,7 @@ RING_FUNC(ring_raylib_set_texture_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2100,7 +2101,7 @@ RING_FUNC(ring_raylib_get_texture_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2115,7 +2116,7 @@ RING_FUNC(ring_raylib_set_texture_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2134,7 +2135,7 @@ RING_FUNC(ring_raylib_get_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2149,7 +2150,7 @@ RING_FUNC(ring_raylib_set_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2168,7 +2169,7 @@ RING_FUNC(ring_raylib_get_texture_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2183,7 +2184,7 @@ RING_FUNC(ring_raylib_set_texture_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2226,7 +2227,7 @@ RING_FUNC(ring_raylib_destroy_rendertexture2d)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2244,7 +2245,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2259,7 +2260,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2278,7 +2279,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_texture_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2293,7 +2294,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_texture_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2312,7 +2313,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_texture_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2327,7 +2328,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_texture_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2346,7 +2347,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_texture_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2361,7 +2362,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_texture_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2380,7 +2381,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2395,7 +2396,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2414,7 +2415,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_texture_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2429,7 +2430,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_texture_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2448,7 +2449,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_depth_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2463,7 +2464,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_depth_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2482,7 +2483,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_depth_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2497,7 +2498,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_depth_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2516,7 +2517,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_depth_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2531,7 +2532,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_depth_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2550,7 +2551,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_depth_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2565,7 +2566,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_depth_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2584,7 +2585,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_depth_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2599,7 +2600,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_depth_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2618,7 +2619,7 @@ RING_FUNC(ring_raylib_get_rendertexture2d_depthTexture)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2633,7 +2634,7 @@ RING_FUNC(ring_raylib_set_rendertexture2d_depthTexture)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2676,7 +2677,7 @@ RING_FUNC(ring_raylib_destroy_rendertexture)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2694,7 +2695,7 @@ RING_FUNC(ring_raylib_get_rendertexture_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2709,7 +2710,7 @@ RING_FUNC(ring_raylib_set_rendertexture_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2728,7 +2729,7 @@ RING_FUNC(ring_raylib_get_rendertexture_texture_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2743,7 +2744,7 @@ RING_FUNC(ring_raylib_set_rendertexture_texture_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2762,7 +2763,7 @@ RING_FUNC(ring_raylib_get_rendertexture_texture_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2777,7 +2778,7 @@ RING_FUNC(ring_raylib_set_rendertexture_texture_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2796,7 +2797,7 @@ RING_FUNC(ring_raylib_get_rendertexture_texture_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2811,7 +2812,7 @@ RING_FUNC(ring_raylib_set_rendertexture_texture_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2830,7 +2831,7 @@ RING_FUNC(ring_raylib_get_rendertexture_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2845,7 +2846,7 @@ RING_FUNC(ring_raylib_set_rendertexture_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2864,7 +2865,7 @@ RING_FUNC(ring_raylib_get_rendertexture_texture_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2879,7 +2880,7 @@ RING_FUNC(ring_raylib_set_rendertexture_texture_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2898,7 +2899,7 @@ RING_FUNC(ring_raylib_get_rendertexture_depth_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2913,7 +2914,7 @@ RING_FUNC(ring_raylib_set_rendertexture_depth_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2932,7 +2933,7 @@ RING_FUNC(ring_raylib_get_rendertexture_depth_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2947,7 +2948,7 @@ RING_FUNC(ring_raylib_set_rendertexture_depth_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2966,7 +2967,7 @@ RING_FUNC(ring_raylib_get_rendertexture_depth_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -2981,7 +2982,7 @@ RING_FUNC(ring_raylib_set_rendertexture_depth_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3000,7 +3001,7 @@ RING_FUNC(ring_raylib_get_rendertexture_depth_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3015,7 +3016,7 @@ RING_FUNC(ring_raylib_set_rendertexture_depth_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3034,7 +3035,7 @@ RING_FUNC(ring_raylib_get_rendertexture_depth_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3049,7 +3050,7 @@ RING_FUNC(ring_raylib_set_rendertexture_depth_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3068,7 +3069,7 @@ RING_FUNC(ring_raylib_get_rendertexture_depthTexture)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3083,7 +3084,7 @@ RING_FUNC(ring_raylib_set_rendertexture_depthTexture)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3126,7 +3127,7 @@ RING_FUNC(ring_raylib_destroy_npatchinfo)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3144,7 +3145,7 @@ RING_FUNC(ring_raylib_get_npatchinfo_sourceRec_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3159,7 +3160,7 @@ RING_FUNC(ring_raylib_set_npatchinfo_sourceRec_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3178,7 +3179,7 @@ RING_FUNC(ring_raylib_get_npatchinfo_sourceRec_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3193,7 +3194,7 @@ RING_FUNC(ring_raylib_set_npatchinfo_sourceRec_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3212,7 +3213,7 @@ RING_FUNC(ring_raylib_get_npatchinfo_sourceRec_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3227,7 +3228,7 @@ RING_FUNC(ring_raylib_set_npatchinfo_sourceRec_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3246,7 +3247,7 @@ RING_FUNC(ring_raylib_get_npatchinfo_sourceRec_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3261,7 +3262,7 @@ RING_FUNC(ring_raylib_set_npatchinfo_sourceRec_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3280,7 +3281,7 @@ RING_FUNC(ring_raylib_get_npatchinfo_left)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3295,7 +3296,7 @@ RING_FUNC(ring_raylib_set_npatchinfo_left)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3314,7 +3315,7 @@ RING_FUNC(ring_raylib_get_npatchinfo_top)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3329,7 +3330,7 @@ RING_FUNC(ring_raylib_set_npatchinfo_top)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3348,7 +3349,7 @@ RING_FUNC(ring_raylib_get_npatchinfo_right)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3363,7 +3364,7 @@ RING_FUNC(ring_raylib_set_npatchinfo_right)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3382,7 +3383,7 @@ RING_FUNC(ring_raylib_get_npatchinfo_bottom)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3397,7 +3398,7 @@ RING_FUNC(ring_raylib_set_npatchinfo_bottom)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3416,7 +3417,7 @@ RING_FUNC(ring_raylib_get_npatchinfo_type)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3431,7 +3432,7 @@ RING_FUNC(ring_raylib_set_npatchinfo_type)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3474,7 +3475,7 @@ RING_FUNC(ring_raylib_destroy_charinfo)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3492,7 +3493,7 @@ RING_FUNC(ring_raylib_get_charinfo_value)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3507,7 +3508,7 @@ RING_FUNC(ring_raylib_set_charinfo_value)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3526,7 +3527,7 @@ RING_FUNC(ring_raylib_get_charinfo_rec_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3541,7 +3542,7 @@ RING_FUNC(ring_raylib_set_charinfo_rec_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3560,7 +3561,7 @@ RING_FUNC(ring_raylib_get_charinfo_rec_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3575,7 +3576,7 @@ RING_FUNC(ring_raylib_set_charinfo_rec_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3594,7 +3595,7 @@ RING_FUNC(ring_raylib_get_charinfo_rec_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3609,7 +3610,7 @@ RING_FUNC(ring_raylib_set_charinfo_rec_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3628,7 +3629,7 @@ RING_FUNC(ring_raylib_get_charinfo_rec_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3643,7 +3644,7 @@ RING_FUNC(ring_raylib_set_charinfo_rec_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3662,7 +3663,7 @@ RING_FUNC(ring_raylib_get_charinfo_offsetX)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3677,7 +3678,7 @@ RING_FUNC(ring_raylib_set_charinfo_offsetX)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3696,7 +3697,7 @@ RING_FUNC(ring_raylib_get_charinfo_offsetY)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3711,7 +3712,7 @@ RING_FUNC(ring_raylib_set_charinfo_offsetY)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3730,7 +3731,7 @@ RING_FUNC(ring_raylib_get_charinfo_advanceX)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3745,7 +3746,7 @@ RING_FUNC(ring_raylib_set_charinfo_advanceX)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3764,7 +3765,7 @@ RING_FUNC(ring_raylib_get_charinfo_data)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3779,11 +3780,11 @@ RING_FUNC(ring_raylib_set_charinfo_data)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3822,7 +3823,7 @@ RING_FUNC(ring_raylib_destroy_font)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3840,7 +3841,7 @@ RING_FUNC(ring_raylib_get_font_texture_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3855,7 +3856,7 @@ RING_FUNC(ring_raylib_set_font_texture_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3874,7 +3875,7 @@ RING_FUNC(ring_raylib_get_font_texture_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3889,7 +3890,7 @@ RING_FUNC(ring_raylib_set_font_texture_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3908,7 +3909,7 @@ RING_FUNC(ring_raylib_get_font_texture_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3923,7 +3924,7 @@ RING_FUNC(ring_raylib_set_font_texture_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3942,7 +3943,7 @@ RING_FUNC(ring_raylib_get_font_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3957,7 +3958,7 @@ RING_FUNC(ring_raylib_set_font_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3976,7 +3977,7 @@ RING_FUNC(ring_raylib_get_font_texture_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -3991,7 +3992,7 @@ RING_FUNC(ring_raylib_set_font_texture_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4010,7 +4011,7 @@ RING_FUNC(ring_raylib_get_font_baseSize)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4025,7 +4026,7 @@ RING_FUNC(ring_raylib_set_font_baseSize)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4044,7 +4045,7 @@ RING_FUNC(ring_raylib_get_font_charsCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4059,7 +4060,7 @@ RING_FUNC(ring_raylib_set_font_charsCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4078,7 +4079,7 @@ RING_FUNC(ring_raylib_get_font_chars)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4093,11 +4094,11 @@ RING_FUNC(ring_raylib_set_font_chars)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4136,7 +4137,7 @@ RING_FUNC(ring_raylib_destroy_spritefont)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4154,7 +4155,7 @@ RING_FUNC(ring_raylib_get_spritefont_texture_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4169,7 +4170,7 @@ RING_FUNC(ring_raylib_set_spritefont_texture_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4188,7 +4189,7 @@ RING_FUNC(ring_raylib_get_spritefont_texture_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4203,7 +4204,7 @@ RING_FUNC(ring_raylib_set_spritefont_texture_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4222,7 +4223,7 @@ RING_FUNC(ring_raylib_get_spritefont_texture_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4237,7 +4238,7 @@ RING_FUNC(ring_raylib_set_spritefont_texture_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4256,7 +4257,7 @@ RING_FUNC(ring_raylib_get_spritefont_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4271,7 +4272,7 @@ RING_FUNC(ring_raylib_set_spritefont_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4290,7 +4291,7 @@ RING_FUNC(ring_raylib_get_spritefont_texture_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4305,7 +4306,7 @@ RING_FUNC(ring_raylib_set_spritefont_texture_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4324,7 +4325,7 @@ RING_FUNC(ring_raylib_get_spritefont_baseSize)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4339,7 +4340,7 @@ RING_FUNC(ring_raylib_set_spritefont_baseSize)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4358,7 +4359,7 @@ RING_FUNC(ring_raylib_get_spritefont_charsCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4373,7 +4374,7 @@ RING_FUNC(ring_raylib_set_spritefont_charsCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4392,7 +4393,7 @@ RING_FUNC(ring_raylib_get_spritefont_chars)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4407,11 +4408,11 @@ RING_FUNC(ring_raylib_set_spritefont_chars)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4450,7 +4451,7 @@ RING_FUNC(ring_raylib_destroy_camera3d)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4468,7 +4469,7 @@ RING_FUNC(ring_raylib_get_camera3d_position_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4483,7 +4484,7 @@ RING_FUNC(ring_raylib_set_camera3d_position_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4502,7 +4503,7 @@ RING_FUNC(ring_raylib_get_camera3d_position_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4517,7 +4518,7 @@ RING_FUNC(ring_raylib_set_camera3d_position_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4536,7 +4537,7 @@ RING_FUNC(ring_raylib_get_camera3d_position_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4551,7 +4552,7 @@ RING_FUNC(ring_raylib_set_camera3d_position_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4570,7 +4571,7 @@ RING_FUNC(ring_raylib_get_camera3d_target_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4585,7 +4586,7 @@ RING_FUNC(ring_raylib_set_camera3d_target_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4604,7 +4605,7 @@ RING_FUNC(ring_raylib_get_camera3d_target_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4619,7 +4620,7 @@ RING_FUNC(ring_raylib_set_camera3d_target_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4638,7 +4639,7 @@ RING_FUNC(ring_raylib_get_camera3d_target_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4653,7 +4654,7 @@ RING_FUNC(ring_raylib_set_camera3d_target_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4672,7 +4673,7 @@ RING_FUNC(ring_raylib_get_camera3d_up_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4687,7 +4688,7 @@ RING_FUNC(ring_raylib_set_camera3d_up_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4706,7 +4707,7 @@ RING_FUNC(ring_raylib_get_camera3d_up_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4721,7 +4722,7 @@ RING_FUNC(ring_raylib_set_camera3d_up_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4740,7 +4741,7 @@ RING_FUNC(ring_raylib_get_camera3d_up_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4755,7 +4756,7 @@ RING_FUNC(ring_raylib_set_camera3d_up_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4774,7 +4775,7 @@ RING_FUNC(ring_raylib_get_camera3d_fovy)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4789,7 +4790,7 @@ RING_FUNC(ring_raylib_set_camera3d_fovy)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4808,7 +4809,7 @@ RING_FUNC(ring_raylib_get_camera3d_type)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4823,7 +4824,7 @@ RING_FUNC(ring_raylib_set_camera3d_type)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4866,7 +4867,7 @@ RING_FUNC(ring_raylib_destroy_mesh)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4884,7 +4885,7 @@ RING_FUNC(ring_raylib_get_mesh_vertexCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4899,7 +4900,7 @@ RING_FUNC(ring_raylib_set_mesh_vertexCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4918,7 +4919,7 @@ RING_FUNC(ring_raylib_get_mesh_triangleCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4933,7 +4934,7 @@ RING_FUNC(ring_raylib_set_mesh_triangleCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4952,7 +4953,7 @@ RING_FUNC(ring_raylib_get_mesh_vertices)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4967,11 +4968,11 @@ RING_FUNC(ring_raylib_set_mesh_vertices)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -4986,7 +4987,7 @@ RING_FUNC(ring_raylib_get_mesh_texcoords)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5001,11 +5002,11 @@ RING_FUNC(ring_raylib_set_mesh_texcoords)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5020,7 +5021,7 @@ RING_FUNC(ring_raylib_get_mesh_texcoords2)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5035,11 +5036,11 @@ RING_FUNC(ring_raylib_set_mesh_texcoords2)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5054,7 +5055,7 @@ RING_FUNC(ring_raylib_get_mesh_normals)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5069,11 +5070,11 @@ RING_FUNC(ring_raylib_set_mesh_normals)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5088,7 +5089,7 @@ RING_FUNC(ring_raylib_get_mesh_tangents)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5103,11 +5104,11 @@ RING_FUNC(ring_raylib_set_mesh_tangents)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5122,7 +5123,7 @@ RING_FUNC(ring_raylib_get_mesh_colors)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5137,11 +5138,11 @@ RING_FUNC(ring_raylib_set_mesh_colors)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5156,7 +5157,7 @@ RING_FUNC(ring_raylib_get_mesh_indices)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5171,11 +5172,11 @@ RING_FUNC(ring_raylib_set_mesh_indices)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5190,7 +5191,7 @@ RING_FUNC(ring_raylib_get_mesh_animVertices)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5205,11 +5206,11 @@ RING_FUNC(ring_raylib_set_mesh_animVertices)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5224,7 +5225,7 @@ RING_FUNC(ring_raylib_get_mesh_animNormals)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5239,11 +5240,11 @@ RING_FUNC(ring_raylib_set_mesh_animNormals)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5258,7 +5259,7 @@ RING_FUNC(ring_raylib_get_mesh_boneIds)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5273,11 +5274,11 @@ RING_FUNC(ring_raylib_set_mesh_boneIds)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5292,7 +5293,7 @@ RING_FUNC(ring_raylib_get_mesh_boneWeights)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5307,11 +5308,11 @@ RING_FUNC(ring_raylib_set_mesh_boneWeights)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5326,7 +5327,7 @@ RING_FUNC(ring_raylib_get_mesh_vaoId)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5341,7 +5342,7 @@ RING_FUNC(ring_raylib_set_mesh_vaoId)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5384,7 +5385,7 @@ RING_FUNC(ring_raylib_destroy_shader)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5402,7 +5403,7 @@ RING_FUNC(ring_raylib_get_shader_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5417,7 +5418,7 @@ RING_FUNC(ring_raylib_set_shader_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5460,7 +5461,7 @@ RING_FUNC(ring_raylib_destroy_materialmap)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5478,7 +5479,7 @@ RING_FUNC(ring_raylib_get_materialmap_texture_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5493,7 +5494,7 @@ RING_FUNC(ring_raylib_set_materialmap_texture_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5512,7 +5513,7 @@ RING_FUNC(ring_raylib_get_materialmap_texture_width)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5527,7 +5528,7 @@ RING_FUNC(ring_raylib_set_materialmap_texture_width)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5546,7 +5547,7 @@ RING_FUNC(ring_raylib_get_materialmap_texture_height)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5561,7 +5562,7 @@ RING_FUNC(ring_raylib_set_materialmap_texture_height)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5580,7 +5581,7 @@ RING_FUNC(ring_raylib_get_materialmap_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5595,7 +5596,7 @@ RING_FUNC(ring_raylib_set_materialmap_texture_mipmaps)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5614,7 +5615,7 @@ RING_FUNC(ring_raylib_get_materialmap_texture_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5629,7 +5630,7 @@ RING_FUNC(ring_raylib_set_materialmap_texture_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5648,7 +5649,7 @@ RING_FUNC(ring_raylib_get_materialmap_value)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5663,7 +5664,7 @@ RING_FUNC(ring_raylib_set_materialmap_value)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5706,7 +5707,7 @@ RING_FUNC(ring_raylib_destroy_material)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5724,7 +5725,7 @@ RING_FUNC(ring_raylib_get_material_shader_id)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5739,7 +5740,7 @@ RING_FUNC(ring_raylib_set_material_shader_id)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5758,7 +5759,7 @@ RING_FUNC(ring_raylib_get_material_params)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5773,11 +5774,11 @@ RING_FUNC(ring_raylib_set_material_params)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5816,7 +5817,7 @@ RING_FUNC(ring_raylib_destroy_transform)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5834,7 +5835,7 @@ RING_FUNC(ring_raylib_get_transform_translation_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5849,7 +5850,7 @@ RING_FUNC(ring_raylib_set_transform_translation_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5868,7 +5869,7 @@ RING_FUNC(ring_raylib_get_transform_translation_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5883,7 +5884,7 @@ RING_FUNC(ring_raylib_set_transform_translation_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5902,7 +5903,7 @@ RING_FUNC(ring_raylib_get_transform_translation_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5917,7 +5918,7 @@ RING_FUNC(ring_raylib_set_transform_translation_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5936,7 +5937,7 @@ RING_FUNC(ring_raylib_get_transform_rotation_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5951,7 +5952,7 @@ RING_FUNC(ring_raylib_set_transform_rotation_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5970,7 +5971,7 @@ RING_FUNC(ring_raylib_get_transform_rotation_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -5985,7 +5986,7 @@ RING_FUNC(ring_raylib_set_transform_rotation_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6004,7 +6005,7 @@ RING_FUNC(ring_raylib_get_transform_rotation_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6019,7 +6020,7 @@ RING_FUNC(ring_raylib_set_transform_rotation_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6038,7 +6039,7 @@ RING_FUNC(ring_raylib_get_transform_rotation_w)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6053,7 +6054,7 @@ RING_FUNC(ring_raylib_set_transform_rotation_w)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6072,7 +6073,7 @@ RING_FUNC(ring_raylib_get_transform_scale_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6087,7 +6088,7 @@ RING_FUNC(ring_raylib_set_transform_scale_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6106,7 +6107,7 @@ RING_FUNC(ring_raylib_get_transform_scale_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6121,7 +6122,7 @@ RING_FUNC(ring_raylib_set_transform_scale_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6140,7 +6141,7 @@ RING_FUNC(ring_raylib_get_transform_scale_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6155,7 +6156,7 @@ RING_FUNC(ring_raylib_set_transform_scale_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6198,7 +6199,7 @@ RING_FUNC(ring_raylib_destroy_boneinfo)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6216,7 +6217,7 @@ RING_FUNC(ring_raylib_get_boneinfo_parent)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6231,7 +6232,7 @@ RING_FUNC(ring_raylib_set_boneinfo_parent)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6274,7 +6275,7 @@ RING_FUNC(ring_raylib_destroy_model)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6292,7 +6293,7 @@ RING_FUNC(ring_raylib_get_model_transform_m0)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6307,7 +6308,7 @@ RING_FUNC(ring_raylib_set_model_transform_m0)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6326,7 +6327,7 @@ RING_FUNC(ring_raylib_get_model_transform_m1)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6341,7 +6342,7 @@ RING_FUNC(ring_raylib_set_model_transform_m1)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6360,7 +6361,7 @@ RING_FUNC(ring_raylib_get_model_transform_m2)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6375,7 +6376,7 @@ RING_FUNC(ring_raylib_set_model_transform_m2)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6394,7 +6395,7 @@ RING_FUNC(ring_raylib_get_model_transform_m3)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6409,7 +6410,7 @@ RING_FUNC(ring_raylib_set_model_transform_m3)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6428,7 +6429,7 @@ RING_FUNC(ring_raylib_get_model_transform_m4)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6443,7 +6444,7 @@ RING_FUNC(ring_raylib_set_model_transform_m4)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6462,7 +6463,7 @@ RING_FUNC(ring_raylib_get_model_transform_m5)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6477,7 +6478,7 @@ RING_FUNC(ring_raylib_set_model_transform_m5)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6496,7 +6497,7 @@ RING_FUNC(ring_raylib_get_model_transform_m6)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6511,7 +6512,7 @@ RING_FUNC(ring_raylib_set_model_transform_m6)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6530,7 +6531,7 @@ RING_FUNC(ring_raylib_get_model_transform_m7)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6545,7 +6546,7 @@ RING_FUNC(ring_raylib_set_model_transform_m7)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6564,7 +6565,7 @@ RING_FUNC(ring_raylib_get_model_transform_m8)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6579,7 +6580,7 @@ RING_FUNC(ring_raylib_set_model_transform_m8)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6598,7 +6599,7 @@ RING_FUNC(ring_raylib_get_model_transform_m9)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6613,7 +6614,7 @@ RING_FUNC(ring_raylib_set_model_transform_m9)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6632,7 +6633,7 @@ RING_FUNC(ring_raylib_get_model_transform_m10)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6647,7 +6648,7 @@ RING_FUNC(ring_raylib_set_model_transform_m10)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6666,7 +6667,7 @@ RING_FUNC(ring_raylib_get_model_transform_m11)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6681,7 +6682,7 @@ RING_FUNC(ring_raylib_set_model_transform_m11)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6700,7 +6701,7 @@ RING_FUNC(ring_raylib_get_model_transform_m12)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6715,7 +6716,7 @@ RING_FUNC(ring_raylib_set_model_transform_m12)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6734,7 +6735,7 @@ RING_FUNC(ring_raylib_get_model_transform_m13)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6749,7 +6750,7 @@ RING_FUNC(ring_raylib_set_model_transform_m13)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6768,7 +6769,7 @@ RING_FUNC(ring_raylib_get_model_transform_m14)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6783,7 +6784,7 @@ RING_FUNC(ring_raylib_set_model_transform_m14)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6802,7 +6803,7 @@ RING_FUNC(ring_raylib_get_model_transform_m15)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6817,7 +6818,7 @@ RING_FUNC(ring_raylib_set_model_transform_m15)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6836,7 +6837,7 @@ RING_FUNC(ring_raylib_get_model_meshCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6851,7 +6852,7 @@ RING_FUNC(ring_raylib_set_model_meshCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6870,7 +6871,7 @@ RING_FUNC(ring_raylib_get_model_meshes)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6885,11 +6886,11 @@ RING_FUNC(ring_raylib_set_model_meshes)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6904,7 +6905,7 @@ RING_FUNC(ring_raylib_get_model_materialCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6919,7 +6920,7 @@ RING_FUNC(ring_raylib_set_model_materialCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6938,7 +6939,7 @@ RING_FUNC(ring_raylib_get_model_materials)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6953,11 +6954,11 @@ RING_FUNC(ring_raylib_set_model_materials)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6972,7 +6973,7 @@ RING_FUNC(ring_raylib_get_model_meshMaterial)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -6987,11 +6988,11 @@ RING_FUNC(ring_raylib_set_model_meshMaterial)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7006,7 +7007,7 @@ RING_FUNC(ring_raylib_get_model_boneCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7021,7 +7022,7 @@ RING_FUNC(ring_raylib_set_model_boneCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7040,7 +7041,7 @@ RING_FUNC(ring_raylib_get_model_bones)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7055,11 +7056,11 @@ RING_FUNC(ring_raylib_set_model_bones)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7074,7 +7075,7 @@ RING_FUNC(ring_raylib_get_model_bindPose)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7089,11 +7090,11 @@ RING_FUNC(ring_raylib_set_model_bindPose)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7132,7 +7133,7 @@ RING_FUNC(ring_raylib_destroy_modelanimation)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7150,7 +7151,7 @@ RING_FUNC(ring_raylib_get_modelanimation_boneCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7165,7 +7166,7 @@ RING_FUNC(ring_raylib_set_modelanimation_boneCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7184,7 +7185,7 @@ RING_FUNC(ring_raylib_get_modelanimation_bones)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7199,11 +7200,11 @@ RING_FUNC(ring_raylib_set_modelanimation_bones)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7218,7 +7219,7 @@ RING_FUNC(ring_raylib_get_modelanimation_frameCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7233,7 +7234,7 @@ RING_FUNC(ring_raylib_set_modelanimation_frameCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7276,7 +7277,7 @@ RING_FUNC(ring_raylib_destroy_ray)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7294,7 +7295,7 @@ RING_FUNC(ring_raylib_get_ray_position_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7309,7 +7310,7 @@ RING_FUNC(ring_raylib_set_ray_position_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7328,7 +7329,7 @@ RING_FUNC(ring_raylib_get_ray_position_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7343,7 +7344,7 @@ RING_FUNC(ring_raylib_set_ray_position_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7362,7 +7363,7 @@ RING_FUNC(ring_raylib_get_ray_position_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7377,7 +7378,7 @@ RING_FUNC(ring_raylib_set_ray_position_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7396,7 +7397,7 @@ RING_FUNC(ring_raylib_get_ray_direction_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7411,7 +7412,7 @@ RING_FUNC(ring_raylib_set_ray_direction_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7430,7 +7431,7 @@ RING_FUNC(ring_raylib_get_ray_direction_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7445,7 +7446,7 @@ RING_FUNC(ring_raylib_set_ray_direction_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7464,7 +7465,7 @@ RING_FUNC(ring_raylib_get_ray_direction_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7479,7 +7480,7 @@ RING_FUNC(ring_raylib_set_ray_direction_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7522,7 +7523,7 @@ RING_FUNC(ring_raylib_destroy_rayhitinfo)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7540,7 +7541,7 @@ RING_FUNC(ring_raylib_get_rayhitinfo_hit)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7555,7 +7556,7 @@ RING_FUNC(ring_raylib_set_rayhitinfo_hit)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7574,7 +7575,7 @@ RING_FUNC(ring_raylib_get_rayhitinfo_distance)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7589,7 +7590,7 @@ RING_FUNC(ring_raylib_set_rayhitinfo_distance)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7608,7 +7609,7 @@ RING_FUNC(ring_raylib_get_rayhitinfo_position_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7623,7 +7624,7 @@ RING_FUNC(ring_raylib_set_rayhitinfo_position_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7642,7 +7643,7 @@ RING_FUNC(ring_raylib_get_rayhitinfo_position_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7657,7 +7658,7 @@ RING_FUNC(ring_raylib_set_rayhitinfo_position_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7676,7 +7677,7 @@ RING_FUNC(ring_raylib_get_rayhitinfo_position_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7691,7 +7692,7 @@ RING_FUNC(ring_raylib_set_rayhitinfo_position_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7710,7 +7711,7 @@ RING_FUNC(ring_raylib_get_rayhitinfo_normal_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7725,7 +7726,7 @@ RING_FUNC(ring_raylib_set_rayhitinfo_normal_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7744,7 +7745,7 @@ RING_FUNC(ring_raylib_get_rayhitinfo_normal_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7759,7 +7760,7 @@ RING_FUNC(ring_raylib_set_rayhitinfo_normal_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7778,7 +7779,7 @@ RING_FUNC(ring_raylib_get_rayhitinfo_normal_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7793,7 +7794,7 @@ RING_FUNC(ring_raylib_set_rayhitinfo_normal_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7836,7 +7837,7 @@ RING_FUNC(ring_raylib_destroy_boundingbox)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7854,7 +7855,7 @@ RING_FUNC(ring_raylib_get_boundingbox_min_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7869,7 +7870,7 @@ RING_FUNC(ring_raylib_set_boundingbox_min_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7888,7 +7889,7 @@ RING_FUNC(ring_raylib_get_boundingbox_min_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7903,7 +7904,7 @@ RING_FUNC(ring_raylib_set_boundingbox_min_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7922,7 +7923,7 @@ RING_FUNC(ring_raylib_get_boundingbox_min_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7937,7 +7938,7 @@ RING_FUNC(ring_raylib_set_boundingbox_min_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7956,7 +7957,7 @@ RING_FUNC(ring_raylib_get_boundingbox_max_x)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7971,7 +7972,7 @@ RING_FUNC(ring_raylib_set_boundingbox_max_x)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -7990,7 +7991,7 @@ RING_FUNC(ring_raylib_get_boundingbox_max_y)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8005,7 +8006,7 @@ RING_FUNC(ring_raylib_set_boundingbox_max_y)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8024,7 +8025,7 @@ RING_FUNC(ring_raylib_get_boundingbox_max_z)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8039,7 +8040,7 @@ RING_FUNC(ring_raylib_set_boundingbox_max_z)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8082,7 +8083,7 @@ RING_FUNC(ring_raylib_destroy_wave)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8100,7 +8101,7 @@ RING_FUNC(ring_raylib_get_wave_sampleCount)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8115,7 +8116,7 @@ RING_FUNC(ring_raylib_set_wave_sampleCount)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8134,7 +8135,7 @@ RING_FUNC(ring_raylib_get_wave_sampleRate)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8149,7 +8150,7 @@ RING_FUNC(ring_raylib_set_wave_sampleRate)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8168,7 +8169,7 @@ RING_FUNC(ring_raylib_get_wave_sampleSize)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8183,7 +8184,7 @@ RING_FUNC(ring_raylib_set_wave_sampleSize)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8202,7 +8203,7 @@ RING_FUNC(ring_raylib_get_wave_channels)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8217,7 +8218,7 @@ RING_FUNC(ring_raylib_set_wave_channels)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8236,7 +8237,7 @@ RING_FUNC(ring_raylib_get_wave_data)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8251,11 +8252,11 @@ RING_FUNC(ring_raylib_set_wave_data)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8294,7 +8295,7 @@ RING_FUNC(ring_raylib_destroy_sound)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8312,7 +8313,7 @@ RING_FUNC(ring_raylib_get_sound_audioBuffer)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8327,11 +8328,11 @@ RING_FUNC(ring_raylib_set_sound_audioBuffer)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8346,7 +8347,7 @@ RING_FUNC(ring_raylib_get_sound_source)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8361,7 +8362,7 @@ RING_FUNC(ring_raylib_set_sound_source)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8380,7 +8381,7 @@ RING_FUNC(ring_raylib_get_sound_buffer)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8395,7 +8396,7 @@ RING_FUNC(ring_raylib_set_sound_buffer)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8414,7 +8415,7 @@ RING_FUNC(ring_raylib_get_sound_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8429,7 +8430,7 @@ RING_FUNC(ring_raylib_set_sound_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8472,7 +8473,7 @@ RING_FUNC(ring_raylib_destroy_audiostream)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8490,7 +8491,7 @@ RING_FUNC(ring_raylib_get_audiostream_sampleRate)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8505,7 +8506,7 @@ RING_FUNC(ring_raylib_set_audiostream_sampleRate)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8524,7 +8525,7 @@ RING_FUNC(ring_raylib_get_audiostream_sampleSize)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8539,7 +8540,7 @@ RING_FUNC(ring_raylib_set_audiostream_sampleSize)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8558,7 +8559,7 @@ RING_FUNC(ring_raylib_get_audiostream_channels)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8573,7 +8574,7 @@ RING_FUNC(ring_raylib_set_audiostream_channels)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8592,7 +8593,7 @@ RING_FUNC(ring_raylib_get_audiostream_audioBuffer)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8607,11 +8608,11 @@ RING_FUNC(ring_raylib_set_audiostream_audioBuffer)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) { 
+	if ( ! RING_API_ISCPOINTER(2) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8626,7 +8627,7 @@ RING_FUNC(ring_raylib_get_audiostream_format)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8641,7 +8642,7 @@ RING_FUNC(ring_raylib_set_audiostream_format)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8660,7 +8661,7 @@ RING_FUNC(ring_raylib_get_audiostream_source)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8675,7 +8676,7 @@ RING_FUNC(ring_raylib_set_audiostream_source)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8718,7 +8719,7 @@ RING_FUNC(ring_raylib_destroy_vrdeviceinfo)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8736,7 +8737,7 @@ RING_FUNC(ring_raylib_get_vrdeviceinfo_hResolution)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8751,7 +8752,7 @@ RING_FUNC(ring_raylib_set_vrdeviceinfo_hResolution)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8770,7 +8771,7 @@ RING_FUNC(ring_raylib_get_vrdeviceinfo_vResolution)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8785,7 +8786,7 @@ RING_FUNC(ring_raylib_set_vrdeviceinfo_vResolution)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8804,7 +8805,7 @@ RING_FUNC(ring_raylib_get_vrdeviceinfo_hScreenSize)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8819,7 +8820,7 @@ RING_FUNC(ring_raylib_set_vrdeviceinfo_hScreenSize)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8838,7 +8839,7 @@ RING_FUNC(ring_raylib_get_vrdeviceinfo_vScreenSize)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8853,7 +8854,7 @@ RING_FUNC(ring_raylib_set_vrdeviceinfo_vScreenSize)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8872,7 +8873,7 @@ RING_FUNC(ring_raylib_get_vrdeviceinfo_vScreenCenter)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8887,7 +8888,7 @@ RING_FUNC(ring_raylib_set_vrdeviceinfo_vScreenCenter)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8906,7 +8907,7 @@ RING_FUNC(ring_raylib_get_vrdeviceinfo_eyeToScreenDistance)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8921,7 +8922,7 @@ RING_FUNC(ring_raylib_set_vrdeviceinfo_eyeToScreenDistance)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8940,7 +8941,7 @@ RING_FUNC(ring_raylib_get_vrdeviceinfo_lensSeparationDistance)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8955,7 +8956,7 @@ RING_FUNC(ring_raylib_set_vrdeviceinfo_lensSeparationDistance)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8974,7 +8975,7 @@ RING_FUNC(ring_raylib_get_vrdeviceinfo_interpupillaryDistance)
 		RING_API_ERROR(RING_API_MISS1PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -8989,7 +8990,7 @@ RING_FUNC(ring_raylib_set_vrdeviceinfo_interpupillaryDistance)
 		RING_API_ERROR(RING_API_MISS2PARA) ;
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) { 
+	if ( ! RING_API_ISCPOINTER(1) ) { 
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -10601,7 +10602,7 @@ RING_FUNC(ring_UpdateCamera_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -10809,7 +10810,7 @@ RING_FUNC(ring_DrawLineStrip_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11337,7 +11338,7 @@ RING_FUNC(ring_DrawTriangleFan_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11539,7 +11540,7 @@ RING_FUNC(ring_LoadImageEx_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11566,7 +11567,7 @@ RING_FUNC(ring_LoadImagePro_2)
 		RING_API_ERROR(RING_API_MISS4PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11858,7 +11859,7 @@ RING_FUNC(ring_UpdateTexture_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) {
+	if ( ! RING_API_ISCPOINTER(2) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11891,7 +11892,7 @@ RING_FUNC(ring_ImageToPOT_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11907,7 +11908,7 @@ RING_FUNC(ring_ImageFormat_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11925,7 +11926,7 @@ RING_FUNC(ring_ImageAlphaMask_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11941,7 +11942,7 @@ RING_FUNC(ring_ImageAlphaClear_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11961,7 +11962,7 @@ RING_FUNC(ring_ImageAlphaCrop_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11979,7 +11980,7 @@ RING_FUNC(ring_ImageAlphaPremultiply_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -11993,7 +11994,7 @@ RING_FUNC(ring_ImageCrop_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12009,7 +12010,7 @@ RING_FUNC(ring_ImageResize_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12031,7 +12032,7 @@ RING_FUNC(ring_ImageResizeNN_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12053,7 +12054,7 @@ RING_FUNC(ring_ImageResizeCanvas_2)
 		RING_API_ERROR(RING_API_BADPARACOUNT);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12085,7 +12086,7 @@ RING_FUNC(ring_ImageMipmaps_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12099,7 +12100,7 @@ RING_FUNC(ring_ImageDither_2)
 		RING_API_ERROR(RING_API_BADPARACOUNT);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12206,7 +12207,7 @@ RING_FUNC(ring_ImageDraw_2)
 		RING_API_ERROR(RING_API_MISS4PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12226,7 +12227,7 @@ RING_FUNC(ring_ImageDrawRectangle_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12244,7 +12245,7 @@ RING_FUNC(ring_ImageDrawRectangleLines_2)
 		RING_API_ERROR(RING_API_MISS4PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12266,7 +12267,7 @@ RING_FUNC(ring_ImageDrawText_2)
 		RING_API_ERROR(RING_API_BADPARACOUNT);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12292,7 +12293,7 @@ RING_FUNC(ring_ImageDrawTextEx_2)
 		RING_API_ERROR(RING_API_BADPARACOUNT);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12324,7 +12325,7 @@ RING_FUNC(ring_ImageFlipVertical_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12338,7 +12339,7 @@ RING_FUNC(ring_ImageFlipHorizontal_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12352,7 +12353,7 @@ RING_FUNC(ring_ImageRotateCW_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12366,7 +12367,7 @@ RING_FUNC(ring_ImageRotateCCW_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12380,7 +12381,7 @@ RING_FUNC(ring_ImageColorTint_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12396,7 +12397,7 @@ RING_FUNC(ring_ImageColorInvert_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12410,7 +12411,7 @@ RING_FUNC(ring_ImageColorGrayscale_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12424,7 +12425,7 @@ RING_FUNC(ring_ImageColorContrast_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12442,7 +12443,7 @@ RING_FUNC(ring_ImageColorBrightness_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12460,7 +12461,7 @@ RING_FUNC(ring_ImageColorReplace_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -12712,7 +12713,7 @@ RING_FUNC(ring_GenTextureMipmaps_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -13026,7 +13027,7 @@ RING_FUNC(ring_GenImageFontAtlas_2)
 		RING_API_ERROR(RING_API_BADPARACOUNT);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -13431,7 +13432,7 @@ RING_FUNC(ring_TextJoin)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -13996,7 +13997,7 @@ RING_FUNC(ring_UnloadMesh_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -14056,7 +14057,7 @@ RING_FUNC(ring_SetMaterialTexture_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -14076,7 +14077,7 @@ RING_FUNC(ring_SetModelMeshMaterial_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -14440,7 +14441,7 @@ RING_FUNC(ring_MeshTangents_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -14454,7 +14455,7 @@ RING_FUNC(ring_MeshBinormals_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -14692,7 +14693,7 @@ RING_FUNC(ring_CheckCollisionRaySphereEx_2)
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(4) ) {
+	if ( ! RING_API_ISCPOINTER(4) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -14724,7 +14725,7 @@ RING_FUNC(ring_GetCollisionRayModel_2)
 		RING_API_ERROR(RING_API_MISS2PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) {
+	if ( ! RING_API_ISCPOINTER(2) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -14911,7 +14912,7 @@ RING_FUNC(ring_SetShaderValue_2)
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(3) ) {
+	if ( ! RING_API_ISCPOINTER(3) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -14935,7 +14936,7 @@ RING_FUNC(ring_SetShaderValueV_2)
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(3) ) {
+	if ( ! RING_API_ISCPOINTER(3) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -15226,7 +15227,7 @@ RING_FUNC(ring_UpdateVrTracking_2)
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -15357,7 +15358,7 @@ RING_FUNC(ring_LoadWaveEx_2)
 		RING_API_ERROR(RING_API_BADPARACOUNT);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -15428,7 +15429,7 @@ RING_FUNC(ring_UpdateSound_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) {
+	if ( ! RING_API_ISCPOINTER(2) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -15596,7 +15597,7 @@ RING_FUNC(ring_WaveFormat_2)
 		RING_API_ERROR(RING_API_MISS4PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -15639,7 +15640,7 @@ RING_FUNC(ring_WaveCrop_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(1) ) {
+	if ( ! RING_API_ISCPOINTER(1) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -15875,7 +15876,7 @@ RING_FUNC(ring_UpdateAudioStream_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) {
+	if ( ! RING_API_ISCPOINTER(2) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -16191,7 +16192,7 @@ RING_FUNC(ring_GuiScrollPanel_2)
 		RING_API_ERROR(RING_API_MISS3PARA);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(3) ) {
+	if ( ! RING_API_ISCPOINTER(3) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -16714,7 +16715,7 @@ RING_FUNC(ring_GuiListViewEx_2)
 		RING_API_ERROR(RING_API_BADPARACOUNT);
 		return ;
 	}
-	if ( ! RING_API_ISPOINTER(2) ) {
+	if ( ! RING_API_ISCPOINTER(2) ) {
 		RING_API_ERROR(RING_API_BADPARATYPE);
 		return ;
 	}
@@ -16893,6 +16894,1774 @@ RING_FUNC(ring_GuiIconText)
 	RING_API_RETSTRING(GuiIconText( (int ) RING_API_GETNUMBER(1),RING_API_GETSTRING(2)));
 }
 
+
+RING_FUNC(ring_Clamp)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	RING_API_RETNUMBER(Clamp( (float ) RING_API_GETNUMBER(1), (float ) RING_API_GETNUMBER(2), (float ) RING_API_GETNUMBER(3)));
+}
+
+
+RING_FUNC(ring_Lerp)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	RING_API_RETNUMBER(Lerp( (float ) RING_API_GETNUMBER(1), (float ) RING_API_GETNUMBER(2), (float ) RING_API_GETNUMBER(3)));
+}
+
+
+RING_FUNC(ring_Normalize)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	RING_API_RETNUMBER(Normalize( (float ) RING_API_GETNUMBER(1), (float ) RING_API_GETNUMBER(2), (float ) RING_API_GETNUMBER(3)));
+}
+
+
+RING_FUNC(ring_Remap)
+{
+	if ( RING_API_PARACOUNT != 5 ) {
+		RING_API_ERROR(RING_API_BADPARACOUNT);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(4) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(5) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	RING_API_RETNUMBER(Remap( (float ) RING_API_GETNUMBER(1), (float ) RING_API_GETNUMBER(2), (float ) RING_API_GETNUMBER(3), (float ) RING_API_GETNUMBER(4), (float ) RING_API_GETNUMBER(5)));
+}
+
+
+RING_FUNC(ring_Vector2Zero_2)
+{
+	if ( RING_API_PARACOUNT != 0 ) {
+		RING_API_ERROR(RING_API_BADPARACOUNT);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Zero();
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2One_2)
+{
+	if ( RING_API_PARACOUNT != 0 ) {
+		RING_API_ERROR(RING_API_BADPARACOUNT);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2One();
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2Add_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Add(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"),* (Vector2  *) RING_API_GETCPOINTER(2,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2AddValue_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2AddValue(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2Subtract_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Subtract(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"),* (Vector2  *) RING_API_GETCPOINTER(2,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2SubtractValue_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2SubtractValue(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2Length_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(Vector2Length(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+}
+
+
+RING_FUNC(ring_Vector2LengthSqr_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(Vector2LengthSqr(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+}
+
+
+RING_FUNC(ring_Vector2DotProduct_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(Vector2DotProduct(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"),* (Vector2  *) RING_API_GETCPOINTER(2,"Vector2")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector2"));
+}
+
+
+RING_FUNC(ring_Vector2Distance_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(Vector2Distance(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"),* (Vector2  *) RING_API_GETCPOINTER(2,"Vector2")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector2"));
+}
+
+
+RING_FUNC(ring_Vector2Angle_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(Vector2Angle(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"),* (Vector2  *) RING_API_GETCPOINTER(2,"Vector2")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector2"));
+}
+
+
+RING_FUNC(ring_Vector2Scale_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Scale(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2Multiply_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Multiply(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"),* (Vector2  *) RING_API_GETCPOINTER(2,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2Negate_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Negate(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2Divide_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Divide(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"),* (Vector2  *) RING_API_GETCPOINTER(2,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2Normalize_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Normalize(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2Lerp_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Lerp(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"),* (Vector2  *) RING_API_GETCPOINTER(2,"Vector2"), (float ) RING_API_GETNUMBER(3));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2Rotate_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2Rotate(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector2MoveTowards_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector2 *pValue ; 
+		pValue = (Vector2 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector2)) ;
+		*pValue = Vector2MoveTowards(* (Vector2  *) RING_API_GETCPOINTER(1,"Vector2"),* (Vector2  *) RING_API_GETCPOINTER(2,"Vector2"), (float ) RING_API_GETNUMBER(3));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector2"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector2"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector2",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Zero_2)
+{
+	if ( RING_API_PARACOUNT != 0 ) {
+		RING_API_ERROR(RING_API_BADPARACOUNT);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Zero();
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3One_2)
+{
+	if ( RING_API_PARACOUNT != 0 ) {
+		RING_API_ERROR(RING_API_BADPARACOUNT);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3One();
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Add_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Add(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3AddValue_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3AddValue(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Subtract_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Subtract(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3SubtractValue_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3SubtractValue(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Scale_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Scale(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Multiply_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Multiply(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3CrossProduct_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3CrossProduct(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Perpendicular_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Perpendicular(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Length_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(Vector3Length(* (const Vector3  *) RING_API_GETCPOINTER(1,"const Vector3")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+}
+
+
+RING_FUNC(ring_Vector3LengthSqr_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(Vector3LengthSqr(* (const Vector3  *) RING_API_GETCPOINTER(1,"const Vector3")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+}
+
+
+RING_FUNC(ring_Vector3DotProduct_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(Vector3DotProduct(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+}
+
+
+RING_FUNC(ring_Vector3Distance_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(Vector3Distance(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+}
+
+
+RING_FUNC(ring_Vector3Negate_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Negate(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Divide_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Divide(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Normalize_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Normalize(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3OrthoNormalize_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISCPOINTER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISCPOINTER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	Vector3OrthoNormalize((Vector3 *) RING_API_GETCPOINTER(1,"Vector3"),(Vector3 *) RING_API_GETCPOINTER(2,"Vector3"));
+}
+
+
+RING_FUNC(ring_Vector3Transform_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Transform(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Matrix  *) RING_API_GETCPOINTER(2,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3RotateByQuaternion_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3RotateByQuaternion(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Quaternion  *) RING_API_GETCPOINTER(2,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Lerp_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Lerp(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"), (float ) RING_API_GETNUMBER(3));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Reflect_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Reflect(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Min_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Min(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Max_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Max(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3Barycenter_2)
+{
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = Vector3Barycenter(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(3,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(4,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(3))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(3,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(4))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(4,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_Vector3ToFloatV_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		float3 *pValue ; 
+		pValue = (float3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(float3)) ;
+		*pValue = Vector3ToFloatV(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"float3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixDeterminant_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(MatrixDeterminant(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+}
+
+
+RING_FUNC(ring_MatrixTrace_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(MatrixTrace(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+}
+
+
+RING_FUNC(ring_MatrixTranspose_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixTranspose(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixInvert_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixInvert(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixNormalize_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixNormalize(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixIdentity_2)
+{
+	if ( RING_API_PARACOUNT != 0 ) {
+		RING_API_ERROR(RING_API_BADPARACOUNT);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixIdentity();
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixAdd_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixAdd(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix"),* (Matrix  *) RING_API_GETCPOINTER(2,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixSubtract_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixSubtract(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix"),* (Matrix  *) RING_API_GETCPOINTER(2,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixTranslate_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixTranslate( (float ) RING_API_GETNUMBER(1), (float ) RING_API_GETNUMBER(2), (float ) RING_API_GETNUMBER(3));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixRotate_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixRotate(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixRotateXYZ_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixRotateXYZ(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixRotateX_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixRotateX( (float ) RING_API_GETNUMBER(1));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixRotateY_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixRotateY( (float ) RING_API_GETNUMBER(1));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixRotateZ_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixRotateZ( (float ) RING_API_GETNUMBER(1));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixScale_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixScale( (float ) RING_API_GETNUMBER(1), (float ) RING_API_GETNUMBER(2), (float ) RING_API_GETNUMBER(3));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixMultiply_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixMultiply(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix"),* (Matrix  *) RING_API_GETCPOINTER(2,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixFrustum_2)
+{
+	if ( RING_API_PARACOUNT != 6 ) {
+		RING_API_ERROR(RING_API_BADPARACOUNT);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(4) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(5) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(6) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixFrustum( (double ) RING_API_GETNUMBER(1), (double ) RING_API_GETNUMBER(2), (double ) RING_API_GETNUMBER(3), (double ) RING_API_GETNUMBER(4), (double ) RING_API_GETNUMBER(5), (double ) RING_API_GETNUMBER(6));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixPerspective_2)
+{
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(4) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixPerspective( (double ) RING_API_GETNUMBER(1), (double ) RING_API_GETNUMBER(2), (double ) RING_API_GETNUMBER(3), (double ) RING_API_GETNUMBER(4));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixOrtho_2)
+{
+	if ( RING_API_PARACOUNT != 6 ) {
+		RING_API_ERROR(RING_API_BADPARACOUNT);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(4) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(5) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(6) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixOrtho( (double ) RING_API_GETNUMBER(1), (double ) RING_API_GETNUMBER(2), (double ) RING_API_GETNUMBER(3), (double ) RING_API_GETNUMBER(4), (double ) RING_API_GETNUMBER(5), (double ) RING_API_GETNUMBER(6));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixLookAt_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = MatrixLookAt(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(3,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(3))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(3,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_MatrixToFloatV_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		float16 *pValue ; 
+		pValue = (float16 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(float16)) ;
+		*pValue = MatrixToFloatV(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"float16",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionAdd_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionAdd(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"),* (Quaternion  *) RING_API_GETCPOINTER(2,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionAddValue_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionAddValue(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionSubtract_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionSubtract(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"),* (Quaternion  *) RING_API_GETCPOINTER(2,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionSubtractValue_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionSubtractValue(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionIdentity_2)
+{
+	if ( RING_API_PARACOUNT != 0 ) {
+		RING_API_ERROR(RING_API_BADPARACOUNT);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionIdentity();
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionLength_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	RING_API_RETNUMBER(QuaternionLength(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion")));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+}
+
+
+RING_FUNC(ring_QuaternionNormalize_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionNormalize(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionInvert_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionInvert(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionMultiply_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionMultiply(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"),* (Quaternion  *) RING_API_GETCPOINTER(2,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionScale_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionScale(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionDivide_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionDivide(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"),* (Quaternion  *) RING_API_GETCPOINTER(2,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionLerp_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionLerp(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"),* (Quaternion  *) RING_API_GETCPOINTER(2,"Quaternion"), (float ) RING_API_GETNUMBER(3));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionNlerp_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionNlerp(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"),* (Quaternion  *) RING_API_GETCPOINTER(2,"Quaternion"), (float ) RING_API_GETNUMBER(3));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionSlerp_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionSlerp(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"),* (Quaternion  *) RING_API_GETCPOINTER(2,"Quaternion"), (float ) RING_API_GETNUMBER(3));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionFromVector3ToVector3_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionFromVector3ToVector3(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"),* (Vector3  *) RING_API_GETCPOINTER(2,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionFromMatrix_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionFromMatrix(* (Matrix  *) RING_API_GETCPOINTER(1,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionToMatrix_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Matrix *pValue ; 
+		pValue = (Matrix *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Matrix)) ;
+		*pValue = QuaternionToMatrix(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Matrix",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionFromAxisAngle_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionFromAxisAngle(* (Vector3  *) RING_API_GETCPOINTER(1,"Vector3"), (float ) RING_API_GETNUMBER(2));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Vector3"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionToAxisAngle_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISCPOINTER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISCPOINTER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	QuaternionToAxisAngle(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"),(Vector3 *) RING_API_GETCPOINTER(2,"Vector3"),(float *) RING_API_GETCPOINTER(3,"float"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+}
+
+
+RING_FUNC(ring_QuaternionFromEuler_2)
+{
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS3PARA);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(1) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(2) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	if ( ! RING_API_ISNUMBER(3) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionFromEuler( (float ) RING_API_GETNUMBER(1), (float ) RING_API_GETNUMBER(2), (float ) RING_API_GETNUMBER(3));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionToEuler_2)
+{
+	if ( RING_API_PARACOUNT != 1 ) {
+		RING_API_ERROR(RING_API_MISS1PARA);
+		return ;
+	}
+	{
+		Vector3 *pValue ; 
+		pValue = (Vector3 *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Vector3)) ;
+		*pValue = QuaternionToEuler(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Vector3",ring_state_free);
+	}
+}
+
+
+RING_FUNC(ring_QuaternionTransform_2)
+{
+	if ( RING_API_PARACOUNT != 2 ) {
+		RING_API_ERROR(RING_API_MISS2PARA);
+		return ;
+	}
+	{
+		Quaternion *pValue ; 
+		pValue = (Quaternion *) ring_state_malloc(((VM *) pPointer)->pRingState,sizeof(Quaternion)) ;
+		*pValue = QuaternionTransform(* (Quaternion  *) RING_API_GETCPOINTER(1,"Quaternion"),* (Matrix  *) RING_API_GETCPOINTER(2,"Matrix"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(1))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(1,"Quaternion"));
+	if (RING_API_ISCPOINTERNOTASSIGNED(2))
+		ring_state_free(((VM *) pPointer)->pRingState,RING_API_GETCPOINTER(2,"Matrix"));
+		RING_API_RETMANAGEDCPOINTER(pValue,"Quaternion",ring_state_free);
+	}
+}
+
 RING_FUNC(ring_setmodelmaterialtexture_2) {
 	Model *model;
 	int nMaterial,nMap;
@@ -16907,6 +18676,64 @@ RING_FUNC(ring_setmodelmaterialtexture_2) {
 	texture = RING_API_GETCPOINTER(4,"Texture2D");
 	model->materials[nMaterial].maps[nMap].texture = *texture ;
 }
+
+RING_FUNC(ring_getimagepixelr_2) {
+	Color *data;
+	int y,x,width;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	data = RING_API_GETCPOINTER(1,"Color");
+	y = (int) RING_API_GETNUMBER(2);
+	x = (int) RING_API_GETNUMBER(3);
+	width = (int) RING_API_GETNUMBER(4);
+	RING_API_RETNUMBER( (double) data[y*width + x].r ) ;
+}
+
+RING_FUNC(ring_getimagepixelg_2) {
+	Color *data;
+	int y,x,width;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	data = RING_API_GETCPOINTER(1,"Color");
+	y = (int) RING_API_GETNUMBER(2);
+	x = (int) RING_API_GETNUMBER(3);
+	width = (int) RING_API_GETNUMBER(4);
+	RING_API_RETNUMBER( (double) data[y*width + x].g ) ;
+}
+
+RING_FUNC(ring_getimagepixelb_2) {
+	Color *data;
+	int y,x,width;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	data = RING_API_GETCPOINTER(1,"Color");
+	y = (int) RING_API_GETNUMBER(2);
+	x = (int) RING_API_GETNUMBER(3);
+	width = (int) RING_API_GETNUMBER(4);
+	RING_API_RETNUMBER( (double) data[y*width + x].b ) ;
+}
+
+RING_FUNC(ring_getimagepixela_2) {
+	Color *data;
+	int y,x,width;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	data = RING_API_GETCPOINTER(1,"Color");
+	y = (int) RING_API_GETNUMBER(2);
+	x = (int) RING_API_GETNUMBER(3);
+	width = (int) RING_API_GETNUMBER(4);
+	RING_API_RETNUMBER( (double) data[y*width + x].a ) ;
+}
+
+
 RING_API void ringlib_init(RingState *pRingState)
 {
 	ring_vm_funcregister("initwindow",ring_InitWindow);
@@ -17354,7 +19181,103 @@ RING_API void ringlib_init(RingState *pRingState)
 	ring_vm_funcregister("guiloadstyledefault",ring_GuiLoadStyleDefault);
 	ring_vm_funcregister("guiupdatestylecomplete",ring_GuiUpdateStyleComplete);
 	ring_vm_funcregister("guiicontext",ring_GuiIconText);
+	ring_vm_funcregister("clamp",ring_Clamp);
+	ring_vm_funcregister("lerp",ring_Lerp);
+	ring_vm_funcregister("normalize",ring_Normalize);
+	ring_vm_funcregister("remap",ring_Remap);
+	ring_vm_funcregister("vector2zero_2",ring_Vector2Zero_2);
+	ring_vm_funcregister("vector2one_2",ring_Vector2One_2);
+	ring_vm_funcregister("vector2add_2",ring_Vector2Add_2);
+	ring_vm_funcregister("vector2addvalue_2",ring_Vector2AddValue_2);
+	ring_vm_funcregister("vector2subtract_2",ring_Vector2Subtract_2);
+	ring_vm_funcregister("vector2subtractvalue_2",ring_Vector2SubtractValue_2);
+	ring_vm_funcregister("vector2length_2",ring_Vector2Length_2);
+	ring_vm_funcregister("vector2lengthsqr_2",ring_Vector2LengthSqr_2);
+	ring_vm_funcregister("vector2dotproduct_2",ring_Vector2DotProduct_2);
+	ring_vm_funcregister("vector2distance_2",ring_Vector2Distance_2);
+	ring_vm_funcregister("vector2angle_2",ring_Vector2Angle_2);
+	ring_vm_funcregister("vector2scale_2",ring_Vector2Scale_2);
+	ring_vm_funcregister("vector2multiply_2",ring_Vector2Multiply_2);
+	ring_vm_funcregister("vector2negate_2",ring_Vector2Negate_2);
+	ring_vm_funcregister("vector2divide_2",ring_Vector2Divide_2);
+	ring_vm_funcregister("vector2normalize_2",ring_Vector2Normalize_2);
+	ring_vm_funcregister("vector2lerp_2",ring_Vector2Lerp_2);
+	ring_vm_funcregister("vector2rotate_2",ring_Vector2Rotate_2);
+	ring_vm_funcregister("vector2movetowards_2",ring_Vector2MoveTowards_2);
+	ring_vm_funcregister("vector3zero_2",ring_Vector3Zero_2);
+	ring_vm_funcregister("vector3one_2",ring_Vector3One_2);
+	ring_vm_funcregister("vector3add_2",ring_Vector3Add_2);
+	ring_vm_funcregister("vector3addvalue_2",ring_Vector3AddValue_2);
+	ring_vm_funcregister("vector3subtract_2",ring_Vector3Subtract_2);
+	ring_vm_funcregister("vector3subtractvalue_2",ring_Vector3SubtractValue_2);
+	ring_vm_funcregister("vector3scale_2",ring_Vector3Scale_2);
+	ring_vm_funcregister("vector3multiply_2",ring_Vector3Multiply_2);
+	ring_vm_funcregister("vector3crossproduct_2",ring_Vector3CrossProduct_2);
+	ring_vm_funcregister("vector3perpendicular_2",ring_Vector3Perpendicular_2);
+	ring_vm_funcregister("vector3length_2",ring_Vector3Length_2);
+	ring_vm_funcregister("vector3lengthsqr_2",ring_Vector3LengthSqr_2);
+	ring_vm_funcregister("vector3dotproduct_2",ring_Vector3DotProduct_2);
+	ring_vm_funcregister("vector3distance_2",ring_Vector3Distance_2);
+	ring_vm_funcregister("vector3negate_2",ring_Vector3Negate_2);
+	ring_vm_funcregister("vector3divide_2",ring_Vector3Divide_2);
+	ring_vm_funcregister("vector3normalize_2",ring_Vector3Normalize_2);
+	ring_vm_funcregister("vector3orthonormalize_2",ring_Vector3OrthoNormalize_2);
+	ring_vm_funcregister("vector3transform_2",ring_Vector3Transform_2);
+	ring_vm_funcregister("vector3rotatebyquaternion_2",ring_Vector3RotateByQuaternion_2);
+	ring_vm_funcregister("vector3lerp_2",ring_Vector3Lerp_2);
+	ring_vm_funcregister("vector3reflect_2",ring_Vector3Reflect_2);
+	ring_vm_funcregister("vector3min_2",ring_Vector3Min_2);
+	ring_vm_funcregister("vector3max_2",ring_Vector3Max_2);
+	ring_vm_funcregister("vector3barycenter_2",ring_Vector3Barycenter_2);
+	ring_vm_funcregister("vector3tofloatv_2",ring_Vector3ToFloatV_2);
+	ring_vm_funcregister("matrixdeterminant_2",ring_MatrixDeterminant_2);
+	ring_vm_funcregister("matrixtrace_2",ring_MatrixTrace_2);
+	ring_vm_funcregister("matrixtranspose_2",ring_MatrixTranspose_2);
+	ring_vm_funcregister("matrixinvert_2",ring_MatrixInvert_2);
+	ring_vm_funcregister("matrixnormalize_2",ring_MatrixNormalize_2);
+	ring_vm_funcregister("matrixidentity_2",ring_MatrixIdentity_2);
+	ring_vm_funcregister("matrixadd_2",ring_MatrixAdd_2);
+	ring_vm_funcregister("matrixsubtract_2",ring_MatrixSubtract_2);
+	ring_vm_funcregister("matrixtranslate_2",ring_MatrixTranslate_2);
+	ring_vm_funcregister("matrixrotate_2",ring_MatrixRotate_2);
+	ring_vm_funcregister("matrixrotatexyz_2",ring_MatrixRotateXYZ_2);
+	ring_vm_funcregister("matrixrotatex_2",ring_MatrixRotateX_2);
+	ring_vm_funcregister("matrixrotatey_2",ring_MatrixRotateY_2);
+	ring_vm_funcregister("matrixrotatez_2",ring_MatrixRotateZ_2);
+	ring_vm_funcregister("matrixscale_2",ring_MatrixScale_2);
+	ring_vm_funcregister("matrixmultiply_2",ring_MatrixMultiply_2);
+	ring_vm_funcregister("matrixfrustum_2",ring_MatrixFrustum_2);
+	ring_vm_funcregister("matrixperspective_2",ring_MatrixPerspective_2);
+	ring_vm_funcregister("matrixortho_2",ring_MatrixOrtho_2);
+	ring_vm_funcregister("matrixlookat_2",ring_MatrixLookAt_2);
+	ring_vm_funcregister("matrixtofloatv_2",ring_MatrixToFloatV_2);
+	ring_vm_funcregister("quaternionadd_2",ring_QuaternionAdd_2);
+	ring_vm_funcregister("quaternionaddvalue_2",ring_QuaternionAddValue_2);
+	ring_vm_funcregister("quaternionsubtract_2",ring_QuaternionSubtract_2);
+	ring_vm_funcregister("quaternionsubtractvalue_2",ring_QuaternionSubtractValue_2);
+	ring_vm_funcregister("quaternionidentity_2",ring_QuaternionIdentity_2);
+	ring_vm_funcregister("quaternionlength_2",ring_QuaternionLength_2);
+	ring_vm_funcregister("quaternionnormalize_2",ring_QuaternionNormalize_2);
+	ring_vm_funcregister("quaternioninvert_2",ring_QuaternionInvert_2);
+	ring_vm_funcregister("quaternionmultiply_2",ring_QuaternionMultiply_2);
+	ring_vm_funcregister("quaternionscale_2",ring_QuaternionScale_2);
+	ring_vm_funcregister("quaterniondivide_2",ring_QuaternionDivide_2);
+	ring_vm_funcregister("quaternionlerp_2",ring_QuaternionLerp_2);
+	ring_vm_funcregister("quaternionnlerp_2",ring_QuaternionNlerp_2);
+	ring_vm_funcregister("quaternionslerp_2",ring_QuaternionSlerp_2);
+	ring_vm_funcregister("quaternionfromvector3tovector3_2",ring_QuaternionFromVector3ToVector3_2);
+	ring_vm_funcregister("quaternionfrommatrix_2",ring_QuaternionFromMatrix_2);
+	ring_vm_funcregister("quaterniontomatrix_2",ring_QuaternionToMatrix_2);
+	ring_vm_funcregister("quaternionfromaxisangle_2",ring_QuaternionFromAxisAngle_2);
+	ring_vm_funcregister("quaterniontoaxisangle_2",ring_QuaternionToAxisAngle_2);
+	ring_vm_funcregister("quaternionfromeuler_2",ring_QuaternionFromEuler_2);
+	ring_vm_funcregister("quaterniontoeuler_2",ring_QuaternionToEuler_2);
+	ring_vm_funcregister("quaterniontransform_2",ring_QuaternionTransform_2);
 	ring_vm_funcregister("setmodelmaterialtexture_2",ring_setmodelmaterialtexture_2);
+	ring_vm_funcregister("getimagepixelr_2",ring_getimagepixelr_2);
+	ring_vm_funcregister("getimagepixelg_2",ring_getimagepixelg_2);
+	ring_vm_funcregister("getimagepixelb_2",ring_getimagepixelb_2);
+	ring_vm_funcregister("getimagepixela_2",ring_getimagepixela_2);
 	ring_vm_funcregister("raylib_new_vector2",ring_raylib_new_vector2);
 	ring_vm_funcregister("raylib_new_managed_vector2",ring_raylib_new_managed_vector2);
 	ring_vm_funcregister("raylib_destroy_vector2",ring_raylib_destroy_vector2);

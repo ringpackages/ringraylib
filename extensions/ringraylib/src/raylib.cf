@@ -8,6 +8,7 @@
 #include <raylib.h>
 #define RAYGUI_IMPLEMENTATION
 #include "raygui/raygui.h"
+#include "raymath/raymath.h"
 
 </code>
 
@@ -530,6 +531,104 @@ void GuiUpdateStyleComplete(void)
 const char *GuiIconText(int iconId, const char *text)
 
 <comment>
+RayMath Functions 
+</comment>
+
+float Clamp(float value, float min, float max)
+float Lerp(float start, float end, float amount)
+float Normalize(float value, float start, float end)
+float Remap(float value, float inputStart, float inputEnd, float outputStart, float outputEnd) 
+Vector2 Vector2Zero@2(void)
+Vector2 Vector2One@2(void)
+Vector2 Vector2Add@2(Vector2 v1, Vector2 v2)
+Vector2 Vector2AddValue@2(Vector2 v, float add)
+Vector2 Vector2Subtract@2(Vector2 v1, Vector2 v2)
+Vector2 Vector2SubtractValue@2(Vector2 v, float sub)
+float Vector2Length@2(Vector2 v)
+float Vector2LengthSqr@2(Vector2 v)
+float Vector2DotProduct@2(Vector2 v1, Vector2 v2)
+float Vector2Distance@2(Vector2 v1, Vector2 v2)
+float Vector2Angle@2(Vector2 v1, Vector2 v2)
+Vector2 Vector2Scale@2(Vector2 v, float scale)
+Vector2 Vector2Multiply@2(Vector2 v1, Vector2 v2)
+Vector2 Vector2Negate@2(Vector2 v)
+Vector2 Vector2Divide@2(Vector2 v1, Vector2 v2)
+Vector2 Vector2Normalize@2(Vector2 v)
+Vector2 Vector2Lerp@2(Vector2 v1, Vector2 v2, float amount)
+Vector2 Vector2Rotate@2(Vector2 v, float degs)
+Vector2 Vector2MoveTowards@2(Vector2 v, Vector2 target, float maxDistance)
+Vector3 Vector3Zero@2(void)
+Vector3 Vector3One@2(void)
+Vector3 Vector3Add@2(Vector3 v1, Vector3 v2)
+Vector3 Vector3AddValue@2(Vector3 v, float add)
+Vector3 Vector3Subtract@2(Vector3 v1, Vector3 v2)
+Vector3 Vector3SubtractValue@2(Vector3 v, float sub)
+Vector3 Vector3Scale@2(Vector3 v, float scalar)
+Vector3 Vector3Multiply@2(Vector3 v1, Vector3 v2)
+Vector3 Vector3CrossProduct@2(Vector3 v1, Vector3 v2)
+Vector3 Vector3Perpendicular@2(Vector3 v)
+float Vector3Length@2(const Vector3 v)
+float Vector3LengthSqr@2(const Vector3 v)
+float Vector3DotProduct@2(Vector3 v1, Vector3 v2)
+float Vector3Distance@2(Vector3 v1, Vector3 v2)
+Vector3 Vector3Negate@2(Vector3 v)
+Vector3 Vector3Divide@2(Vector3 v1, Vector3 v2)
+Vector3 Vector3Normalize@2(Vector3 v)
+void Vector3OrthoNormalize@2(Vector3 *v1, Vector3 *v2)
+Vector3 Vector3Transform@2(Vector3 v, Matrix mat)
+Vector3 Vector3RotateByQuaternion@2(Vector3 v, Quaternion q)
+Vector3 Vector3Lerp@2(Vector3 v1, Vector3 v2, float amount)
+Vector3 Vector3Reflect@2(Vector3 v, Vector3 normal)
+Vector3 Vector3Min@2(Vector3 v1, Vector3 v2)
+Vector3 Vector3Max@2(Vector3 v1, Vector3 v2)
+Vector3 Vector3Barycenter@2(Vector3 p, Vector3 a, Vector3 b, Vector3 c)
+float3 Vector3ToFloatV@2(Vector3 v)
+float MatrixDeterminant@2(Matrix mat)
+float MatrixTrace@2(Matrix mat)
+Matrix MatrixTranspose@2(Matrix mat)
+Matrix MatrixInvert@2(Matrix mat)
+Matrix MatrixNormalize@2(Matrix mat)
+Matrix MatrixIdentity@2(void)
+Matrix MatrixAdd@2(Matrix left, Matrix right)
+Matrix MatrixSubtract@2(Matrix left, Matrix right)
+Matrix MatrixTranslate@2(float x, float y, float z)
+Matrix MatrixRotate@2(Vector3 axis, float angle)
+Matrix MatrixRotateXYZ@2(Vector3 ang)
+Matrix MatrixRotateX@2(float angle)
+Matrix MatrixRotateY@2(float angle)
+Matrix MatrixRotateZ@2(float angle)
+Matrix MatrixScale@2(float x, float y, float z)
+Matrix MatrixMultiply@2(Matrix left, Matrix right)
+Matrix MatrixFrustum@2(double left, double right, double bottom, double top, double near, double far)
+Matrix MatrixPerspective@2(double fovy, double aspect, double near, double far)
+Matrix MatrixOrtho@2(double left, double right, double bottom, double top, double near, double far)
+Matrix MatrixLookAt@2(Vector3 eye, Vector3 target, Vector3 up)
+float16 MatrixToFloatV@2(Matrix mat)
+Quaternion QuaternionAdd@2(Quaternion q1, Quaternion q2)
+Quaternion QuaternionAddValue@2(Quaternion q, float add)
+Quaternion QuaternionSubtract@2(Quaternion q1, Quaternion q2)
+Quaternion QuaternionSubtractValue@2(Quaternion q, float sub)
+Quaternion QuaternionIdentity@2(void)
+float QuaternionLength@2(Quaternion q)
+Quaternion QuaternionNormalize@2(Quaternion q)
+Quaternion QuaternionInvert@2(Quaternion q)
+Quaternion QuaternionMultiply@2(Quaternion q1, Quaternion q2)
+Quaternion QuaternionScale@2(Quaternion q, float mul)
+Quaternion QuaternionDivide@2(Quaternion q1, Quaternion q2)
+Quaternion QuaternionLerp@2(Quaternion q1, Quaternion q2, float amount)
+Quaternion QuaternionNlerp@2(Quaternion q1, Quaternion q2, float amount)
+Quaternion QuaternionSlerp@2(Quaternion q1, Quaternion q2, float amount)
+Quaternion QuaternionFromVector3ToVector3@2(Vector3 from, Vector3 to)
+Quaternion QuaternionFromMatrix@2(Matrix mat)
+Matrix QuaternionToMatrix@2(Quaternion q)
+Quaternion QuaternionFromAxisAngle@2(Vector3 axis, float angle)
+void QuaternionToAxisAngle@2(Quaternion q, Vector3 *outAxis, float *outAngle)
+Quaternion QuaternionFromEuler@2(float roll, float pitch, float yaw)
+Vector3 QuaternionToEuler@2(Quaternion q)
+Quaternion QuaternionTransform@2(Quaternion q, Matrix mat)
+
+
+<comment>
 Special Functions - Added in RingRayLib 
 </comment>
 
@@ -548,8 +647,70 @@ RING_FUNC(ring_setmodelmaterialtexture_2) {
 	texture = RING_API_GETCPOINTER(4,"Texture2D");
 	model->materials[nMaterial].maps[nMap].texture = *texture ;
 }
+
+RING_FUNC(ring_getimagepixelr_2) {
+	Color *data;
+	int y,x,width;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	data = RING_API_GETCPOINTER(1,"Color");
+	y = (int) RING_API_GETNUMBER(2);
+	x = (int) RING_API_GETNUMBER(3);
+	width = (int) RING_API_GETNUMBER(4);
+	RING_API_RETNUMBER( (double) data[y*width + x].r ) ;
+}
+
+RING_FUNC(ring_getimagepixelg_2) {
+	Color *data;
+	int y,x,width;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	data = RING_API_GETCPOINTER(1,"Color");
+	y = (int) RING_API_GETNUMBER(2);
+	x = (int) RING_API_GETNUMBER(3);
+	width = (int) RING_API_GETNUMBER(4);
+	RING_API_RETNUMBER( (double) data[y*width + x].g ) ;
+}
+
+RING_FUNC(ring_getimagepixelb_2) {
+	Color *data;
+	int y,x,width;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	data = RING_API_GETCPOINTER(1,"Color");
+	y = (int) RING_API_GETNUMBER(2);
+	x = (int) RING_API_GETNUMBER(3);
+	width = (int) RING_API_GETNUMBER(4);
+	RING_API_RETNUMBER( (double) data[y*width + x].b ) ;
+}
+
+RING_FUNC(ring_getimagepixela_2) {
+	Color *data;
+	int y,x,width;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA);
+		return ;
+	}
+	data = RING_API_GETCPOINTER(1,"Color");
+	y = (int) RING_API_GETNUMBER(2);
+	x = (int) RING_API_GETNUMBER(3);
+	width = (int) RING_API_GETNUMBER(4);
+	RING_API_RETNUMBER( (double) data[y*width + x].a ) ;
+}
+
+
 </code>
 
 <register>
 void setmodelmaterialtexture_2(Model *p1,int p2,int p3,Texture2D *p4)
+int getimagepixelr_2(Color *p1,int y,int x,int width) 
+int getimagepixelg_2(Color *p1,int y,int x,int width) 
+int getimagepixelb_2(Color *p1,int y,int x,int width) 
+int getimagepixela_2(Color *p1,int y,int x,int width) 
 </register>
