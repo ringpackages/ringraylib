@@ -18750,6 +18750,59 @@ RING_FUNC(ring_getimagepixela_2) {
 }
 
 
+RING_FUNC(ring_vec2set)
+{
+	Vector2 *pMyPointer ;
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS4PARA) ;
+		return ;
+	}
+	if ( (! RING_API_ISCPOINTER(1)) || (! RING_API_ISNUMBER(2)) || (! RING_API_ISNUMBER(3)) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	pMyPointer = RING_API_GETCPOINTER(1,"Vector2");
+	pMyPointer->x = RING_API_GETNUMBER(2);
+	pMyPointer->y = RING_API_GETNUMBER(3);
+}
+
+
+RING_FUNC(ring_vec3set)
+{
+	Vector3 *pMyPointer ;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA) ;
+		return ;
+	}
+	if ( (! RING_API_ISCPOINTER(1)) || (! RING_API_ISNUMBER(2)) ||
+	       (! RING_API_ISNUMBER(3)) || (! RING_API_ISNUMBER(4)) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	pMyPointer = RING_API_GETCPOINTER(1,"Vector3");
+	pMyPointer->x = RING_API_GETNUMBER(2);
+	pMyPointer->y = RING_API_GETNUMBER(3);
+	pMyPointer->z = RING_API_GETNUMBER(4);
+}
+
+RING_FUNC(ring_vec4set)
+{
+	Vector4 *pMyPointer ;
+	if ( RING_API_PARACOUNT != 5 ) {
+		RING_API_ERROR(RING_API_MISS4PARA) ;
+		return ;
+	}
+	if ( (! RING_API_ISCPOINTER(1)) || (! RING_API_ISNUMBER(2)) ||
+	     (! RING_API_ISNUMBER(3))   || (! RING_API_ISNUMBER(4)) || (! RING_API_ISNUMBER(5)) ) {
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	pMyPointer = RING_API_GETCPOINTER(1,"Vector4");
+	pMyPointer->x = RING_API_GETNUMBER(2);
+	pMyPointer->y = RING_API_GETNUMBER(3);
+	pMyPointer->z = RING_API_GETNUMBER(4);
+	pMyPointer->w = RING_API_GETNUMBER(5);
+}
 RING_LIBINIT
 {
 	RING_API_REGISTER("initwindow",ring_InitWindow);
@@ -19295,6 +19348,9 @@ RING_LIBINIT
 	RING_API_REGISTER("getimagepixelg_2",ring_getimagepixelg_2);
 	RING_API_REGISTER("getimagepixelb_2",ring_getimagepixelb_2);
 	RING_API_REGISTER("getimagepixela_2",ring_getimagepixela_2);
+	RING_API_REGISTER("vec2set",ring_vec2set);
+	RING_API_REGISTER("vec3set",ring_vec3set);
+	RING_API_REGISTER("vec4set",ring_vec4set);
 	RING_API_REGISTER("raylib_new_vector2",ring_raylib_new_vector2);
 	RING_API_REGISTER("raylib_new_managed_vector2",ring_raylib_new_managed_vector2);
 	RING_API_REGISTER("raylib_destroy_vector2",ring_raylib_destroy_vector2);
@@ -19841,4 +19897,47 @@ RING_LIBINIT
 	RING_API_REGISTER("raylib_set_vrdeviceinfo_lensseparationdistance",ring_raylib_set_vrdeviceinfo_lensSeparationDistance);
 	RING_API_REGISTER("raylib_get_vrdeviceinfo_interpupillarydistance",ring_raylib_get_vrdeviceinfo_interpupillaryDistance);
 	RING_API_REGISTER("raylib_set_vrdeviceinfo_interpupillarydistance",ring_raylib_set_vrdeviceinfo_interpupillaryDistance);
+	RING_API_REGISTER("vec2",ring_raylib_new_managed_vector2);
+	RING_API_REGISTER("vec2getx",ring_raylib_get_vector2_x);
+	RING_API_REGISTER("vec2setx",ring_raylib_set_vector2_x);
+	RING_API_REGISTER("vec2gety",ring_raylib_get_vector2_y);
+	RING_API_REGISTER("vec2sety",ring_raylib_set_vector2_y);
+	RING_API_REGISTER("vec3",ring_raylib_new_managed_vector3);
+	RING_API_REGISTER("vec3getx",ring_raylib_get_vector3_x);
+	RING_API_REGISTER("vec3setx",ring_raylib_set_vector3_x);
+	RING_API_REGISTER("vec3gety",ring_raylib_get_vector3_y);
+	RING_API_REGISTER("vec3sety",ring_raylib_set_vector3_y);
+	RING_API_REGISTER("vec3getz",ring_raylib_get_vector3_z);
+	RING_API_REGISTER("vec3setz",ring_raylib_set_vector3_z);
+	RING_API_REGISTER("vec4",ring_raylib_new_managed_vector4);
+	RING_API_REGISTER("vec4getx",ring_raylib_get_vector4_x);
+	RING_API_REGISTER("vec4setx",ring_raylib_set_vector4_x);
+	RING_API_REGISTER("vec4gety",ring_raylib_get_vector4_y);
+	RING_API_REGISTER("vec4sety",ring_raylib_set_vector4_y);
+	RING_API_REGISTER("vec4getz",ring_raylib_get_vector4_z);
+	RING_API_REGISTER("vec4setz",ring_raylib_set_vector4_z);
+	RING_API_REGISTER("vec4getw",ring_raylib_get_vector4_w);
+	RING_API_REGISTER("vec4setw",ring_raylib_set_vector4_w);
+	RING_API_REGISTER("getcamera3dposx",ring_raylib_get_camera3d_position_x);
+	RING_API_REGISTER("setcamera3dposx",ring_raylib_set_camera3d_position_x);
+	RING_API_REGISTER("getcamera3dposy",ring_raylib_get_camera3d_position_y);
+	RING_API_REGISTER("setcamera3dposy",ring_raylib_set_camera3d_position_y);
+	RING_API_REGISTER("getcamera3dposz",ring_raylib_get_camera3d_position_z);
+	RING_API_REGISTER("setcamera3dposz",ring_raylib_set_camera3d_position_z);
+	RING_API_REGISTER("getcamera3dtarx",ring_raylib_get_camera3d_target_x);
+	RING_API_REGISTER("setcamera3dtarx",ring_raylib_set_camera3d_target_x);
+	RING_API_REGISTER("getcamera3dtary",ring_raylib_get_camera3d_target_y);
+	RING_API_REGISTER("setcamera3dtary",ring_raylib_set_camera3d_target_y);
+	RING_API_REGISTER("getcamera3dtarz",ring_raylib_get_camera3d_target_z);
+	RING_API_REGISTER("setcamera3dtarz",ring_raylib_set_camera3d_target_z);
+	RING_API_REGISTER("getcamera3dupx",ring_raylib_get_camera3d_up_x);
+	RING_API_REGISTER("setcamera3dupx",ring_raylib_set_camera3d_up_x);
+	RING_API_REGISTER("getcamera3dupy",ring_raylib_get_camera3d_up_y);
+	RING_API_REGISTER("setcamera3dupy",ring_raylib_set_camera3d_up_y);
+	RING_API_REGISTER("getcamera3dupz",ring_raylib_get_camera3d_up_z);
+	RING_API_REGISTER("setcamera3dupz",ring_raylib_set_camera3d_up_z);
+	RING_API_REGISTER("getcamera3fovy",ring_raylib_get_camera3d_fovy);
+	RING_API_REGISTER("setcamera3fovy",ring_raylib_set_camera3d_fovy);
+	RING_API_REGISTER("getcamera3type",ring_raylib_get_camera3d_type);
+	RING_API_REGISTER("setcamera3type",ring_raylib_set_camera3d_type);
 }

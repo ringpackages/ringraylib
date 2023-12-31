@@ -733,3 +733,118 @@ int getimagepixelg_2(Color *p1,int y,int x,int width)
 int getimagepixelb_2(Color *p1,int y,int x,int width) 
 int getimagepixela_2(Color *p1,int y,int x,int width) 
 </register>
+
+
+<comment>
+Extra names for functions
+</comment>
+
+<runcode>
+aExtraFunctionName + ["vec2","raylib_new_managed_vector2"]
+aExtraFunctionName + ["vec2getx","raylib_get_vector2_x"]
+aExtraFunctionName + ["vec2setx","raylib_set_vector2_x"]
+aExtraFunctionName + ["vec2gety","raylib_get_vector2_y"]
+aExtraFunctionName + ["vec2sety","raylib_set_vector2_y"]
+aExtraFunctionName + ["vec3","raylib_new_managed_vector3"]
+aExtraFunctionName + ["vec3getx","raylib_get_vector3_x"]
+aExtraFunctionName + ["vec3setx","raylib_set_vector3_x"]
+aExtraFunctionName + ["vec3gety","raylib_get_vector3_y"]
+aExtraFunctionName + ["vec3sety","raylib_set_vector3_y"]
+aExtraFunctionName + ["vec3getz","raylib_get_vector3_z"]
+aExtraFunctionName + ["vec3setz","raylib_set_vector3_z"]
+aExtraFunctionName + ["vec4","raylib_new_managed_vector4"]
+aExtraFunctionName + ["vec4getx","raylib_get_vector4_x"]
+aExtraFunctionName + ["vec4setx","raylib_set_vector4_x"]
+aExtraFunctionName + ["vec4gety","raylib_get_vector4_y"]
+aExtraFunctionName + ["vec4sety","raylib_set_vector4_y"]
+aExtraFunctionName + ["vec4getz","raylib_get_vector4_z"]
+aExtraFunctionName + ["vec4setz","raylib_set_vector4_z"]
+aExtraFunctionName + ["vec4getw","raylib_get_vector4_w"]
+aExtraFunctionName + ["vec4setw","raylib_set_vector4_w"]
+
+aExtraFunctionName + ["getcamera3dposx","raylib_get_camera3d_position_x"]
+aExtraFunctionName + ["setcamera3dposx","raylib_set_camera3d_position_x"]
+aExtraFunctionName + ["getcamera3dposy","raylib_get_camera3d_position_y"]
+aExtraFunctionName + ["setcamera3dposy","raylib_set_camera3d_position_y"]
+aExtraFunctionName + ["getcamera3dposz","raylib_get_camera3d_position_z"]
+aExtraFunctionName + ["setcamera3dposz","raylib_set_camera3d_position_z"]
+aExtraFunctionName + ["getcamera3dtarx","raylib_get_camera3d_target_x"]
+aExtraFunctionName + ["setcamera3dtarx","raylib_set_camera3d_target_x"]
+aExtraFunctionName + ["getcamera3dtary","raylib_get_camera3d_target_y"]
+aExtraFunctionName + ["setcamera3dtary","raylib_set_camera3d_target_y"]
+aExtraFunctionName + ["getcamera3dtarz","raylib_get_camera3d_target_z"]
+aExtraFunctionName + ["setcamera3dtarz","raylib_set_camera3d_target_z"]
+aExtraFunctionName + ["getcamera3dupx","raylib_get_camera3d_up_x"]
+aExtraFunctionName + ["setcamera3dupx","raylib_set_camera3d_up_x"]
+aExtraFunctionName + ["getcamera3dupy","raylib_get_camera3d_up_y"]
+aExtraFunctionName + ["setcamera3dupy","raylib_set_camera3d_up_y"]
+aExtraFunctionName + ["getcamera3dupz","raylib_get_camera3d_up_z"]
+aExtraFunctionName + ["setcamera3dupz","raylib_set_camera3d_up_z"]
+aExtraFunctionName + ["getcamera3fovy","raylib_get_camera3d_fovy"]
+aExtraFunctionName + ["setcamera3fovy","raylib_set_camera3d_fovy"]
+aExtraFunctionName + ["getcamera3type","raylib_get_camera3d_type"]
+aExtraFunctionName + ["setcamera3type","raylib_set_camera3d_type"]
+
+</runcode>
+
+<register>
+void vec2set(Vector2 v,double x,double y)
+void vec3set(Vector3 v,double x,double y,double z)
+void vec4set(Vector4 v,double x,double y,double z, double w)
+</register>
+
+<code>
+RING_FUNC(ring_vec2set)
+{
+	Vector2 *pMyPointer ;
+	if ( RING_API_PARACOUNT != 3 ) {
+		RING_API_ERROR(RING_API_MISS4PARA) ;
+		return ;
+	}
+	if ( (! RING_API_ISCPOINTER(1)) || (! RING_API_ISNUMBER(2)) || (! RING_API_ISNUMBER(3)) ) { 
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	pMyPointer = RING_API_GETCPOINTER(1,"Vector2");
+	pMyPointer->x = RING_API_GETNUMBER(2);
+	pMyPointer->y = RING_API_GETNUMBER(3);
+}
+
+
+RING_FUNC(ring_vec3set)
+{
+	Vector3 *pMyPointer ;
+	if ( RING_API_PARACOUNT != 4 ) {
+		RING_API_ERROR(RING_API_MISS4PARA) ;
+		return ;
+	}
+	if ( (! RING_API_ISCPOINTER(1)) || (! RING_API_ISNUMBER(2)) ||
+	       (! RING_API_ISNUMBER(3)) || (! RING_API_ISNUMBER(4)) ) { 
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	pMyPointer = RING_API_GETCPOINTER(1,"Vector3");
+	pMyPointer->x = RING_API_GETNUMBER(2);
+	pMyPointer->y = RING_API_GETNUMBER(3);
+	pMyPointer->z = RING_API_GETNUMBER(4);
+}
+
+RING_FUNC(ring_vec4set)
+{
+	Vector4 *pMyPointer ;
+	if ( RING_API_PARACOUNT != 5 ) {
+		RING_API_ERROR(RING_API_MISS4PARA) ;
+		return ;
+	}
+	if ( (! RING_API_ISCPOINTER(1)) || (! RING_API_ISNUMBER(2)) ||
+	     (! RING_API_ISNUMBER(3))   || (! RING_API_ISNUMBER(4)) || (! RING_API_ISNUMBER(5)) ) { 
+		RING_API_ERROR(RING_API_BADPARATYPE);
+		return ;
+	}
+	pMyPointer = RING_API_GETCPOINTER(1,"Vector4");
+	pMyPointer->x = RING_API_GETNUMBER(2);
+	pMyPointer->y = RING_API_GETNUMBER(3);
+	pMyPointer->z = RING_API_GETNUMBER(4);
+	pMyPointer->w = RING_API_GETNUMBER(5);
+}
+</code>
