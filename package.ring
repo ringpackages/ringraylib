@@ -21,9 +21,10 @@ aPackageInfo = [
 		]
 	],
 	:files = 	[
+		"main.ring",
+		"README.md"
 	],
 	:ringfolderfiles = 	[
-		"main.ring",
 		"bin/load/raylib.ring",
 		"bin/raylib.dll",
 		"bin/ring_raylib.dll",
