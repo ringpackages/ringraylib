@@ -48,6 +48,10 @@ func CharInfo p1,p2,p3,p4,p5,p6,p7,p8,p9
 	oCharInfo = new CharInfo(p1,p2,p3,p4,p5,p6,p7,p8,p9)
 	return oCharInfo
 
+func GlyphInfo p1,p2,p3,p4
+	oGlyphInfo = new GlyphInfo(p1,p2,p3,p4)
+	return oGlyphInfo
+
 func Font p1,p2,p3,p4,p5,p6,p7,p8
 	oSpriteFont = new SpriteFont(p1,p2,p3,p4,p5,p6,p7,p8)
 	return oSpriteFont
@@ -66,6 +70,10 @@ func SpriteFont p1,p2,p3,p4,p5,p6,p7,p8
 
 func Camera3D p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11 
 	oCamera = new Camera3D(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11)
+	return oCamera
+
+func Camera2D p1,p2,p3,p4,p5,p6
+	oCamera = new Camera2D(p1,p2,p3,p4,p5,p6)
 	return oCamera
 
 func Mesh p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14
@@ -135,6 +143,9 @@ func isKeyDown vKey
 func IsKeyPressed vKey
 	return IsKeyPressed_2(RayLib_PrepareKey(vKey))
 
+func IsKeyPressedRepeat vKey
+	return IsKeyPressedRepeat_2(RayLib_PrepareKey(vKey))
+
 func IsKeyReleased vKey
 	return IsKeyReleased_2(RayLib_PrepareKey(vKey))
 
@@ -172,6 +183,26 @@ func GetWorldToScreen position,camera
 func GetCameraMatrix camera
 	return GetCameraMatrix_2(GPData(Camera))
 
+func GetCameraMatrix2D camera
+	oMatrix = new Matrix
+	oMatrix.setData( GetCameraMatrix2D_2(GPData(camera)) )
+	return oMatrix
+
+func GetScreenToWorld2D position, camera
+	oVector2 = new Vector2
+	oVector2.setData( GetScreenToWorld2D_2(GPData(position), GPData(camera)) )
+	return oVector2
+
+func GetWorldToScreenEx position, camera, width, height
+	oVector2 = new Vector2
+	oVector2.setData( GetWorldToScreenEx_2(GPData(position), GPData(camera), width, height) )
+	return oVector2
+
+func GetWorldToScreen2D position, camera
+	oVector2 = new Vector2
+	oVector2.setData( GetWorldToScreen2D_2(GPData(position), GPData(camera)) )
+	return oVector2
+
 func SetCameraMode camera,mode
 	return UpdateCamera_2(GPData(camera),mode)
 
@@ -182,12 +213,23 @@ func UpdateCamera camera,mode
 	else
 		return UpdateCamera_2(camera,mode)
 	ok
+
+func UpdateCameraPro camera, movement, rotation, zoom
+	if isObject(camera)
+		UpdateCameraPro_2(camera.Data(), GPData(movement), GPData(rotation), zoom)
+		camera.refresh()
+	else
+		return UpdateCameraPro_2(camera, GPData(movement), GPData(rotation), zoom)
+	ok
 	
 func DrawBillboard camera,texture,center,size,tint
 	return DrawBillboard_2(GPData(camera),GPData(texture),GPData(center),size,tint)
 
 func DrawBillboardRec camera,texture,sourceRec,center,size,tint
 	return DrawBillboardRec_2(GPData(camera),GPData(texture),GPData(sourceRec),GPData(center),size,GPData(tint))
+
+func DrawBillboardPro camera, texture, source, position, up, size, origin, rotation, tint
+	return DrawBillboardPro_2(GPData(camera), GPData(texture), GPData(source), GPData(position), GPData(up), GPData(size), GPData(origin), rotation, GPData(tint))
 
 func UpdateVrTracking camera
 	return UpdateVrTracking_2(GPData(camera))
@@ -234,8 +276,72 @@ func DrawTriangleLines v1, v2, v3, color
 func DrawTriangleFan points, numPoints, color
 	return DrawTriangleFan_2(points, numPoints, GPData(color))
 
+func DrawTriangleStrip points, pointCount, color
+	return DrawTriangleStrip_2(points, pointCount, GPData(color))
+
 func DrawPoly center, sides, radius, rotation, color
 	return DrawPoly_2(GPData(center), sides, radius, rotation, GPData(color))
+
+func DrawPolyLines center, sides, radius, rotation, color
+	return DrawPolyLines_2(GPData(center), sides, radius, rotation, GPData(color))
+
+func DrawPolyLinesEx center, sides, radius, rotation, lineThick, color
+	return DrawPolyLinesEx_2(GPData(center), sides, radius, rotation, lineThick, GPData(color))
+
+func DrawSplineLinear points, pointCount, thick, color
+	return DrawSplineLinear_2(points, pointCount, thick, GPData(color))
+
+func DrawSplineBasis points, pointCount, thick, color
+	return DrawSplineBasis_2(points, pointCount, thick, GPData(color))
+
+func DrawSplineCatmullRom points, pointCount, thick, color
+	return DrawSplineCatmullRom_2(points, pointCount, thick, GPData(color))
+
+func DrawSplineBezierQuadratic points, pointCount, thick, color
+	return DrawSplineBezierQuadratic_2(points, pointCount, thick, GPData(color))
+
+func DrawSplineBezierCubic points, pointCount, thick, color
+	return DrawSplineBezierCubic_2(points, pointCount, thick, GPData(color))
+
+func DrawSplineSegmentLinear p1, p2, thick, color
+	return DrawSplineSegmentLinear_2(GPData(p1), GPData(p2), thick, GPData(color))
+
+func DrawSplineSegmentBasis p1, p2, p3, p4, thick, color
+	return DrawSplineSegmentBasis_2(GPData(p1), GPData(p2), GPData(p3), GPData(p4), thick, GPData(color))
+
+func DrawSplineSegmentCatmullRom p1, p2, p3, p4, thick, color
+	return DrawSplineSegmentCatmullRom_2(GPData(p1), GPData(p2), GPData(p3), GPData(p4), thick, GPData(color))
+
+func DrawSplineSegmentBezierQuadratic p1, c2, p3, thick, color
+	return DrawSplineSegmentBezierQuadratic_2(GPData(p1), GPData(c2), GPData(p3), thick, GPData(color))
+
+func DrawSplineSegmentBezierCubic p1, c2, c3, p4, thick, color
+	return DrawSplineSegmentBezierCubic_2(GPData(p1), GPData(c2), GPData(c3), GPData(p4), thick, GPData(color))
+
+func GetSplinePointLinear startPos, endPos, t
+	oVector2 = new Vector2
+	oVector2.setData( GetSplinePointLinear_2(GPData(startPos), GPData(endPos), t) )
+	return oVector2
+
+func GetSplinePointBasis p1, p2, p3, p4, t
+	oVector2 = new Vector2
+	oVector2.setData( GetSplinePointBasis_2(GPData(p1), GPData(p2), GPData(p3), GPData(p4), t) )
+	return oVector2
+
+func GetSplinePointCatmullRom p1, p2, p3, p4, t
+	oVector2 = new Vector2
+	oVector2.setData( GetSplinePointCatmullRom_2(GPData(p1), GPData(p2), GPData(p3), GPData(p4), t) )
+	return oVector2
+
+func GetSplinePointBezierQuad p1, c2, p3, t
+	oVector2 = new Vector2
+	oVector2.setData( GetSplinePointBezierQuad_2(GPData(p1), GPData(c2), GPData(p3), t) )
+	return oVector2
+
+func GetSplinePointBezierCubic p1, c2, c3, p4, t
+	oVector2 = new Vector2
+	oVector2.setData( GetSplinePointBezierCubic_2(GPData(p1), GPData(c2), GPData(c3), GPData(p4), t) )
+	return oVector2
 
 func CheckCollisionCircles center1, radius1, center2, radius2
 	return CheckCollisionCircles_2(GPData(center1), radius1, GPData(center2), radius2)
@@ -252,14 +358,32 @@ func CheckCollisionPointCircle point, center, radius
 func CheckCollisionPointTriangle point, p1, p2, p3
 	return CheckCollisionPointTriangle_2(GPData(point), GPData(p1), GPData(p2), GPData(p3))
 
+func CheckCollisionPointPoly point, points, pointCount
+	return CheckCollisionPointPoly_2(GPData(point), points, pointCount)
+
+func CheckCollisionLines startPos1, endPos1, startPos2, endPos2, collisionPoint
+	return CheckCollisionLines_2(GPData(startPos1), GPData(endPos1), GPData(startPos2), GPData(endPos2), collisionPoint)
+
+func CheckCollisionPointLine point, p1, p2, threshold
+	return CheckCollisionPointLine_2(GPData(point), GPData(p1), GPData(p2), threshold)
+
 func ColorFromHSV hsv
 	return ColorFromHSV_2(GPData(hsv))
 
 func DrawLine3D startPos, endPos, color
 	return DrawLine3D_2(GPData(startPos), GPData(endPos), GPData(color))
 
+func DrawPoint3D position, color
+	return DrawPoint3D_2(GPData(position), GPData(color))
+
 func DrawCircle3D center, radius, rotationAxis, rotationAngle, color
 	return DrawCircle3D_2(GPData(center),radius, GPData(rotationAxis), rotationAngle, GPData(color))
+
+func DrawTriangle3D v1, v2, v3, color
+	return DrawTriangle3D_2(GPData(v1), GPData(v2), GPData(v3), GPData(color))
+
+func DrawTriangleStrip3D points, pointCount, color
+	return DrawTriangleStrip3D_2(points, pointCount, GPData(color))
 
 func DrawCube position, width,  height, length, color
 	return DrawCube_2(GPData(position), width,  height, length, GPData(color))
@@ -285,8 +409,20 @@ func DrawSphereWires centerPos, radius, rings, slices, color
 func DrawCylinder position, radiusTop, radiusBottom, height,  slices, color
 	return DrawCylinder_2(GPData(position), radiusTop, radiusBottom, height,  slices, GPData(color))
 
+func DrawCylinderEx startPos, endPos, startRadius, endRadius, sides, color
+	return DrawCylinderEx_2(GPData(startPos), GPData(endPos), startRadius, endRadius, sides, GPData(color))
+
 func DrawCylinderWires position, radiusTop, radiusBottom, height, slices, color
 	return DrawCylinderWires_2(GPData(position), radiusTop, radiusBottom, height, slices, GPData(color))
+
+func DrawCylinderWiresEx startPos, endPos, startRadius, endRadius, sides, color
+	return DrawCylinderWiresEx_2(GPData(startPos), GPData(endPos), startRadius, endRadius, sides, GPData(color))
+
+func DrawCapsule startPos, endPos, radius, slices, rings, color
+	return DrawCapsule_2(GPData(startPos), GPData(endPos), radius, slices, rings, GPData(color))
+
+func DrawCapsuleWires startPos, endPos, radius, slices, rings, color
+	return DrawCapsuleWires_2(GPData(startPos), GPData(endPos), radius, slices, rings, GPData(color))
 
 func DrawPlane centerPos, size, color
 	return DrawPlane_2(GPData(centerPos), GPData(size), GPData(color))
@@ -367,8 +503,63 @@ func ImageDraw dst, src,  srcRec,  dstRec
 	UOData(src)
 	return
 
+func ImageClearBackground dst, color
+	ImageClearBackground_2(GPData(dst), GPData(color))
+	UOData(dst)
+	return
+
+func ImageDrawPixel dst, posX, posY, color
+	ImageDrawPixel_2(GPData(dst), posX, posY, GPData(color))
+	UOData(dst)
+	return
+
+func ImageDrawPixelV dst, position, color
+	ImageDrawPixelV_2(GPData(dst), GPData(position), GPData(color))
+	UOData(dst)
+	return
+
+func ImageDrawLine dst, startPosX, startPosY, endPosX, endPosY, color
+	ImageDrawLine_2(GPData(dst), startPosX, startPosY, endPosX, endPosY, GPData(color))
+	UOData(dst)
+	return
+
+func ImageDrawLineV dst, start, endPos, color
+	ImageDrawLineV_2(GPData(dst), GPData(start), GPData(endPos), GPData(color))
+	UOData(dst)
+	return
+
+func ImageDrawCircle dst, centerX, centerY, radius, color
+	ImageDrawCircle_2(GPData(dst), centerX, centerY, radius, GPData(color))
+	UOData(dst)
+	return
+
+func ImageDrawCircleV dst, center, radius, color
+	ImageDrawCircleV_2(GPData(dst), GPData(center), radius, GPData(color))
+	UOData(dst)
+	return
+
+func ImageDrawCircleLines dst, centerX, centerY, radius, color
+	ImageDrawCircleLines_2(GPData(dst), centerX, centerY, radius, GPData(color))
+	UOData(dst)
+	return
+
+func ImageDrawCircleLinesV dst, center, radius, color
+	ImageDrawCircleLinesV_2(GPData(dst), GPData(center), radius, GPData(color))
+	UOData(dst)
+	return
+
 func ImageDrawRectangle dst, rec, color
-	return ImageDrawRectangle_2(GPData(dst), GPData(rec), GPData(color))
+	return ImageDrawRectangleRec_2(GPData(dst), GPData(rec), GPData(color))
+
+func ImageDrawRectangleV dst, position, size, color
+	ImageDrawRectangleV_2(GPData(dst), GPData(position), GPData(size), GPData(color))
+	UOData(dst)
+	return
+
+func ImageDrawRectangleRec dst, rec, color
+	ImageDrawRectangleRec_2(GPData(dst), GPData(rec), GPData(color))
+	UOData(dst)
+	return
 
 func ImageDrawRectangleLines dst, rec, thick, color
 	return ImageDrawRectangleLines_2(GPData(dst), GPData(rec), thick, GPData(color))
@@ -531,6 +722,37 @@ func LoadImageRaw(fileName, width, height, format, headerSize)
 	oImage.setData(LoadImageRaw_2(fileName, width, height, format, headerSize))
 	return oImage
 
+func LoadImageSvg fileNameOrString, width, height
+	oImage = new Image
+	oImage.setData(LoadImageSvg_2(fileNameOrString, width, height))
+	return oImage
+
+func LoadImageAnim fileName, frames
+	oImage = new Image
+	oImage.setData(LoadImageAnim_2(fileName, frames))
+	return oImage
+
+func LoadImageFromMemory fileType, fileData, dataSize
+	oImage = new Image
+	oImage.setData(LoadImageFromMemory_2(fileType, fileData, dataSize))
+	return oImage
+
+func LoadImageFromTexture texture
+	oImage = new Image
+	oImage.setData(LoadImageFromTexture_2(GPData(texture)))
+	return oImage
+
+func LoadImageFromScreen
+	oImage = new Image
+	oImage.setData(LoadImageFromScreen_2())
+	return oImage
+
+func IsImageReady image
+	return IsImageReady_2(GPData(image))
+
+func ExportImageToMemory image, fileType, fileSize
+	return ExportImageToMemory_2(GPData(image), fileType, fileSize)
+
 func ImageFlipVertical image
 	ImageFlipVertical_2(GPData(image))
 	UOData(image)
@@ -581,11 +803,45 @@ func ImageColorReplace image, color, replace
 	UOData(image)
 	return 
 
+func ImageFromImage image, rec
+	oImage = new Image
+	oImage.setData( ImageFromImage_2(GPData(image), GPData(rec)) )
+	return oImage
+
+func ImageBlurGaussian image, blurSize
+	ImageBlurGaussian_2(GPData(image), blurSize)
+	UOData(image)
+	return
+
+func ImageRotate image, degrees
+	ImageRotate_2(GPData(image), degrees)
+	UOData(image)
+	return
+
+func LoadImagePalette image, maxPaletteSize, colorCount
+	return LoadImagePalette_2(GPData(image), maxPaletteSize, colorCount)
+
+func GetImageAlphaBorder image, threshold
+	oRectangle = new Rectangle
+	oRectangle.setData( GetImageAlphaBorder_2(GPData(image), threshold) )
+	return oRectangle
+
+func GetImageColor image, x, y
+	oColor = new Color
+	oColor.setData( GetImageColor_2(GPData(image), x, y) )
+	return oColor
+
 func UnloadImage image
 	return UnloadImage_2(GPData(image))
 
 func UnloadTexture texture
 	return UnloadTexture_2(GPData(texture))
+
+func IsTextureReady texture
+	return IsTextureReady_2(GPData(texture))
+
+func IsRenderTextureReady target
+	return IsRenderTextureReady_2(GPData(target))
 
 func ImageResize image, newWidth, newHeight
 	ImageResize_2(GPData(image), newWidth, newHeight)
@@ -595,8 +851,8 @@ func ImageResize image, newWidth, newHeight
 func DrawTexture texture, posX, posY, tint
 	return DrawTexture_2( GPData(texture),  posX,  posY, GPData(tint) )
 
-func ImageDrawText dst, position, text, fontSize, color
-	ImageDrawText_2(GPData(dst), GPData(position), text, fontSize, GPData(color))
+func ImageDrawText dst, text, posX, posY, fontSize, color
+	ImageDrawText_2(GPData(dst), text, posX, posY, fontSize, GPData(color))
 	UOData(dst)
 	return
 
@@ -617,6 +873,16 @@ func GetMousePosition
 	oVector = new Vector2
 	oVector.setData( GetMousePosition_2()  )
 	return oVector
+
+func GetMouseDelta
+	oVector2 = new Vector2
+	oVector2.setData( GetMouseDelta_2() )
+	return oVector2
+
+func GetMouseWheelMoveV
+	oVector2 = new Vector2
+	oVector2.setData( GetMouseWheelMoveV_2() )
+	return oVector2
 
 func LoadTexture fileName
 	oTexture2D = new Texture2D
@@ -640,6 +906,9 @@ func LoadWave fileName
 	oWave.setData( LoadWave_2(fileName) )
 	return oWave
 
+func IsWaveReady wave
+	return IsWaveReady_2(GPData(wave))
+
 func LoadWaveEx data, sampleCount, sampleRate, sampleSize, channels
 	oWave = new Wave
 	oWave.setData( LoadWaveEx_2(data, sampleCount, sampleRate, sampleSize, channels) )
@@ -647,6 +916,9 @@ func LoadWaveEx data, sampleCount, sampleRate, sampleSize, channels
 
 func LoadSound fileName
 	return LoadSound_2(fileName)
+
+func IsSoundReady sound
+	return IsSoundReady_2(GPData(sound))
 
 func UpdateSound sound, data, samplesCount
 	return UpdateSound_2(GPData(sound), data, samplesCount)
@@ -684,6 +956,12 @@ func SetSoundVolume sound, volume
 func SetSoundPitch sound, pitch
 	return SetSoundPitch_2(GPData(sound), pitch)
 
+func SetSoundPan sound, pan
+	return SetSoundPan_2(GPData(sound), pan)
+
+func LoadWaveSamples wave
+	return LoadWaveSamples_2(GPData(wave))
+
 func WaveFormat wave, sampleRate, sampleSize, channels
 	return WaveFormat_2(GPData(wave), sampleRate, sampleSize, channels)
 
@@ -701,11 +979,38 @@ func GetWaveData wave
 func DrawTextEx font,text,position,fontSize,spacing,tint
 	return DrawTextEx_2(GPData(font),text,GPData(position),fontSize,spacing,tint)
 
+func DrawTextPro font, text, position, origin, rotation, fontSize, spacing, tint
+	return DrawTextPro_2(GPData(font), text, GPData(position), GPData(origin), rotation, fontSize, spacing, GPData(tint))
+
+func DrawTextCodepoint font, codepoint, position, fontSize, tint
+	return DrawTextCodepoint_2(GPData(font), codepoint, GPData(position), fontSize, GPData(tint))
+
+func DrawTextCodepoints font, codepoints, codepointCount, position, fontSize, spacing, tint
+	return DrawTextCodepoints_2(GPData(font), codepoints, codepointCount, GPData(position), fontSize, spacing, GPData(tint))
+
 func DrawCubeTexture texture,position,width,height,length,color
 	return DrawCubeTexture_2(GPData(texture),GPData(position),width,height,length,GPData(color))
 
 func SetWindowIcon image 
 	return SetWindowIcon_2( GPData(image) )
+
+func SetWindowIcons images, count
+	return SetWindowIcons_2( GPData(images), count )
+
+func GetMonitorPosition monitor
+	oVector2 = new Vector2
+	oVector2.setData( GetMonitorPosition_2(monitor) )
+	return oVector2
+
+func GetWindowPosition
+	oVector2 = new Vector2
+	oVector2.setData( GetWindowPosition_2() )
+	return oVector2
+
+func GetWindowScaleDPI
+	oVector2 = new Vector2
+	oVector2.setData( GetWindowScaleDPI_2() )
+	return oVector2
 
 func BeginTextureMode target
 	return BeginTextureMode_2( GPData(target) )
@@ -731,6 +1036,39 @@ func Fade color, alpha
 	oColor.setData( Fade_2( GPData(color), alpha )  )
 	return oColor 
 
+func ColorFromNormalized normalized
+	oColor = new Color
+	oColor.setData( ColorFromNormalized_2(GPData(normalized)) )
+	return oColor
+
+func ColorTint color, tint
+	oColor = new Color
+	oColor.setData( ColorTint_2(GPData(color), GPData(tint)) )
+	return oColor
+
+func ColorBrightness color, factor
+	oColor = new Color
+	oColor.setData( ColorBrightness_2(GPData(color), factor) )
+	return oColor
+
+func ColorContrast color, contrast
+	oColor = new Color
+	oColor.setData( ColorContrast_2(GPData(color), contrast) )
+	return oColor
+
+func ColorAlpha color, alpha
+	oColor = new Color
+	oColor.setData( ColorAlpha_2(GPData(color), alpha) )
+	return oColor
+
+func ColorAlphaBlend dst, src, tint
+	oColor = new Color
+	oColor.setData( ColorAlphaBlend_2(GPData(dst), GPData(src), GPData(tint)) )
+	return oColor
+
+func SetPixelColor dstPtr, color, format
+	return SetPixelColor_2(dstPtr, GPData(color), format)
+
 func GetGestureDragVector 
 	oVector2 = new Vector2 
 	oVector2.setData( GetGestureDragVector_2() )
@@ -755,6 +1093,15 @@ func DrawCircleGradient centerX, centerY, radius, color1, color2
 
 func DrawCircleLines centerX, centerY, radius, color
 	return DrawCircleLines_2( centerX, centerY, radius, GPData(color) )
+
+func DrawCircleLinesV center, radius, color
+	return DrawCircleLinesV_2(GPData(center), radius, GPData(color))
+
+func DrawEllipse centerX, centerY, radiusH, radiusV, color
+	return DrawEllipse_2(centerX, centerY, radiusH, radiusV, GPData(color))
+
+func DrawEllipseLines centerX, centerY, radiusH, radiusV, color
+	return DrawEllipseLines_2(centerX, centerY, radiusH, radiusV, GPData(color))
 
 func DrawRectangle posX, posY, width, height, color 
 	return DrawRectangle_2( posX, posY, width, height, GPData(color) )
@@ -799,6 +1146,9 @@ func GetScreenData
 
 func UpdateTexture texture, pixels 
 	return UpdateTexture_2( GPData(texture), pixels )
+
+func UpdateTextureRec texture, rec, pixels
+	return UpdateTextureRec_2( GPData(texture), GPData(rec), pixels )
 
 func ImageCopy image
 	oImage = new Image 
@@ -902,10 +1252,16 @@ func LoadFontFromImage image, key, firstChar
 	oFont.setData(LoadFontFromImage_2( GPData(image), GPData(key), firstChar) )
 	return oFont
 
-func LoadFontData fileName, fontSize, fontChars, charsCount, type
-	oCharInfo = new CharInfo
-	oCharInfo.setData(LoadFontData_2( fileName, fontSize, fontChars, charsCount, type) )
-	return oCharInfo
+func LoadFontFromMemory fileType, fileData, dataSize, fontSize, codepoints, codepointCount
+	oFont = new Font
+	oFont.setData(LoadFontFromMemory_2(fileType, fileData, dataSize, fontSize, codepoints, codepointCount))
+	return oFont
+
+func IsFontReady font
+	return IsFontReady_2(GPData(font))
+
+func LoadFontData fileData, dataSize, fontSize, codepoints, codepointCount, type
+	return LoadFontData_2(fileData, dataSize, fontSize, codepoints, codepointCount, type)
 
 func GenImageFontAtlas chars, charsCount, fontSize, padding, packMethod
 	oImage = new Image 
@@ -920,6 +1276,14 @@ func MeasureTextEx font, text, fontSize, spacing
 func GetGlyphIndex font, character 
 	return GetGlyphIndex_2( GPData(font), character )
 
+func GetGlyphInfo font, codepoint
+	return GetGlyphInfo_2(GPData(font), codepoint)
+
+func GetGlyphAtlasRec font, codepoint
+	oRectangle = new Rectangle
+	oRectangle.setData( GetGlyphAtlasRec_2(GPData(font), codepoint) )
+	return oRectangle
+
 func LoadModel fileName
 	oModel = new Model 
 	oModel.setData(LoadModel_2( fileName ) )
@@ -933,6 +1297,14 @@ func LoadModelFromMesh mesh
 func UnloadModel model
 	return UnloadModel_2( GPData(model) )
 
+func IsModelReady model
+	return IsModelReady_2( GPData(model) )
+
+func GetModelBoundingBox model
+	oBoundingBox = new BoundingBox
+	oBoundingBox.setData( GetModelBoundingBox_2(GPData(model)) )
+	return oBoundingBox
+
 func LoadMeshes fileName, meshCount
 	oMesh = new Mesh 
 	oMesh.setData(LoadMeshes_2( fileName, meshCount ) )
@@ -943,6 +1315,18 @@ func ExportMesh mesh, fileName
 
 func UnloadMesh mesh
 	return UnloadMesh_2( GPData(mesh) )
+
+func UploadMesh mesh, dynamic
+	return UploadMesh_2( GPData(mesh), dynamic )
+
+func UpdateMeshBuffer mesh, index, data, dataSize, offset
+	return UpdateMeshBuffer_2( GPData(mesh), index, data, dataSize, offset )
+
+func DrawMesh mesh, material, transform
+	return DrawMesh_2( GPData(mesh), GPData(material), GPData(transform) )
+
+func DrawMeshInstanced mesh, material, transforms, instances
+	return DrawMeshInstanced_2( GPData(mesh), GPData(material), transforms, instances )
 
 func LoadMaterials fileName, materialCount
 	oMaterial = new Material 
@@ -956,6 +1340,9 @@ func LoadMaterialDefault
 
 func UnloadMaterial material
 	return UnloadMaterial_2( GPData(material) )
+
+func IsMaterialReady material
+	return IsMaterialReady_2( GPData(material) )
 
 func SetMaterialTexture material, mapType, texture
 	return SetMaterialTexture_2( GPData(material), mapType, GPData(texture) )
@@ -1022,6 +1409,14 @@ func MeshBoundingBox mesh
 	oBoundingBox.setData(MeshBoundingBox_2( GPData(mesh) ))
 	return oBoundingBox
 
+func GenMeshTangents mesh
+	return GenMeshTangents_2( GPData(mesh) )
+
+func GenMeshCone radius, height, slices
+	oMesh = new Mesh
+	oMesh.setData(GenMeshCone_2( radius, height, slices ) )
+	return oMesh
+
 func MeshTangents mesh
 	return MeshTangents_2( GPData(mesh) )
 
@@ -1049,6 +1444,14 @@ func LoadShader vsFileName, fsFileName
 	oShader.setData(LoadShader_2( vsFileName, fsFileName ))
 	return oShader 
 
+func LoadShaderFromMemory vsCode, fsCode
+	oShader = new Shader
+	oShader.setData(LoadShaderFromMemory_2( vsCode, fsCode ))
+	return oShader
+
+func IsShaderReady shader
+	return IsShaderReady_2( GPData(shader) )
+
 func LoadShaderCode vsCode, fsCode
 	oShader = new Shader 
 	oShader.setData(LoadShaderCode_2( vsCode, fsCode ))
@@ -1069,6 +1472,9 @@ func GetTextureDefault
 
 func GetShaderLocation shader, uniformName
 	return GetShaderLocation_2( GPData(shader), uniformName )
+
+func GetShaderLocationAttrib shader, attribName
+	return GetShaderLocationAttrib_2( GPData(shader), attribName )
 
 func SetShaderValue shader, uniformLoc, value, uniformType
 	return SetShaderValue_2( GPData(shader), uniformLoc, value, uniformType )
@@ -1119,10 +1525,29 @@ func BeginShaderMode shader
 func SetVrConfiguration info, distortion
 	return SetVrConfiguration_2( GPData(info), GPData(distortion) )
 
+func LoadVrStereoConfig device
+	oConfig = new VrStereoConfig
+	oConfig.setData(LoadVrStereoConfig_2( GPData(device) ))
+	return oConfig
+
+func UnloadVrStereoConfig config
+	return UnloadVrStereoConfig_2( GPData(config) )
+
+func BeginVrStereoMode config
+	return BeginVrStereoMode_2( GPData(config) )
+
 func LoadMusicStream fileName
 	oMusic = new Music
 	oMusic.setData(LoadMusicStream_2( fileName ))
 	return oMusic
+
+func LoadMusicStreamFromMemory fileType, data, dataSize
+	oMusic = new Music
+	oMusic.setData(LoadMusicStreamFromMemory_2( fileType, data, dataSize ))
+	return oMusic
+
+func IsMusicReady music
+	return IsMusicReady_2( GPData(music) )
 
 func UnloadMusicStream music
 	return UnloadMusicStream_2( GPData(music) )
@@ -1151,6 +1576,12 @@ func SetMusicVolume music, volume
 func SetMusicPitch music, pitch
 	return SetMusicPitch_2( GPData(music), pitch )
 
+func SetMusicPan music, pan
+	return SetMusicPan_2( GPData(music), pan )
+
+func SeekMusicStream music, position
+	return SeekMusicStream_2( GPData(music), position )
+
 func SetMusicLoopCount music, count
 	return SetMusicLoopCount_2( GPData(music), count )
 
@@ -1165,8 +1596,22 @@ func InitAudioStream sampleRate, sampleSize, channels
 	oAudioStream.setData(InitAudioStream_2( sampleRate, sampleSize, channels ))
 	return oAudioStream
 
+func LoadAudioStream sampleRate, sampleSize, channels
+	oAudioStream = new AudioStream
+	oAudioStream.setData(LoadAudioStream_2( sampleRate, sampleSize, channels ))
+	return oAudioStream
+
+func IsAudioStreamReady stream
+	return IsAudioStreamReady_2( GPData(stream) )
+
+func UnloadAudioStream stream
+	return UnloadAudioStream_2( GPData(stream) )
+
 func UpdateAudioStream stream, data, samplesCount
 	return UpdateAudioStream_2( GPData(stream), data, samplesCount )
+
+func IsAudioStreamProcessed stream
+	return IsAudioStreamProcessed_2( GPData(stream) )
 
 func CloseAudioStream stream
 	return CloseAudioStream_2( GPData(stream) )
@@ -1194,6 +1639,9 @@ func SetAudioStreamVolume stream, volume
 
 func SetAudioStreamPitch stream, pitch
 	return SetAudioStreamPitch_2( GPData(stream), pitch )
+
+func SetAudioStreamPan stream, pan
+	return SetAudioStreamPan_2( GPData(stream), pan )
 
 func getimagepixelr p1, y, x, width 
 	return getimagepixelr_2(GPData(p1), y, x, width)
@@ -1716,4 +2164,24 @@ func RayCollision hit
 func GetRayCollisionBox ray,box 
 	oRayCollision = new RayCollision
 	oRayCollision.setData( GetRayCollisionBox_2(GPData(ray),GPData(box)) )
+	return oRayCollision
+
+func GetRayCollisionSphere ray, center, radius
+	oRayCollision = new RayCollision
+	oRayCollision.setData( GetRayCollisionSphere_2(GPData(ray), GPData(center), radius) )
+	return oRayCollision
+
+func GetRayCollisionMesh ray, mesh, transform
+	oRayCollision = new RayCollision
+	oRayCollision.setData( GetRayCollisionMesh_2(GPData(ray), GPData(mesh), GPData(transform)) )
+	return oRayCollision
+
+func GetRayCollisionTriangle ray, p1, p2, p3
+	oRayCollision = new RayCollision
+	oRayCollision.setData( GetRayCollisionTriangle_2(GPData(ray), GPData(p1), GPData(p2), GPData(p3)) )
+	return oRayCollision
+
+func GetRayCollisionQuad ray, p1, p2, p3, p4
+	oRayCollision = new RayCollision
+	oRayCollision.setData( GetRayCollisionQuad_2(GPData(ray), GPData(p1), GPData(p2), GPData(p3), GPData(p4)) )
 	return oRayCollision

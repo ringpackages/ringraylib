@@ -387,6 +387,32 @@ class CharInfo from RayLibBase
 		advanceX	= raylib_get_CharInfo_advanceX(oStruct)
 		data		= raylib_get_CharInfo_data(oStruct)
 
+class GlyphInfo from RayLibBase
+
+	value offsetX offsetY advanceX
+
+	oData = raylib_new_managed_GlyphInfo()
+
+	func init p1,p2,p3,p4
+		value = p1
+		offsetX = p2
+		offsetY = p3
+		advanceX = p4
+
+	func data 
+		raylib_set_GlyphInfo_value(oData,value)
+		raylib_set_GlyphInfo_offsetX(oData,offsetX)
+		raylib_set_GlyphInfo_offsetY(oData,offsetY)
+		raylib_set_GlyphInfo_advanceX(oData,advanceX)
+		return oData
+
+	func setdata oStruct 
+		oData = oStruct  
+		value = raylib_get_GlyphInfo_value(oStruct)
+		offsetX = raylib_get_GlyphInfo_offsetX(oStruct)
+		offsetY = raylib_get_GlyphInfo_offsetY(oStruct)
+		advanceX = raylib_get_GlyphInfo_advanceX(oStruct)
+
 class SpriteFont from RayLibBase
 
 	texture = new Texture2D
@@ -509,6 +535,41 @@ class Camera3D from RayLibBase
 		up.z = raylib_get_Camera3D_up_z(oStruct)
 		fovy = raylib_get_Camera3D_fovy(oStruct)
 		projection = raylib_get_Camera3D_projection(oStruct)
+
+class Camera2D from RayLibBase
+
+	offset	= new Vector2
+	target	= new Vector2
+	rotation
+	zoom
+
+	oData = raylib_new_managed_Camera2D()
+
+	func init p1,p2,p3,p4,p5,p6
+		offset.x = p1
+		offset.y = p2
+		target.x = p3
+		target.y = p4
+		rotation = p5
+		zoom = p6
+
+	func data 
+		raylib_set_Camera2D_offset_x(oData,offset.x)
+		raylib_set_Camera2D_offset_y(oData,offset.y)
+		raylib_set_Camera2D_target_x(oData,target.x)
+		raylib_set_Camera2D_target_y(oData,target.y)
+		raylib_set_Camera2D_rotation(oData,rotation)
+		raylib_set_Camera2D_zoom(oData,zoom)
+		return oData	
+
+	func setdata oStruct 
+		oData = oStruct  
+		offset.x = raylib_get_Camera2D_offset_x(oStruct)
+		offset.y = raylib_get_Camera2D_offset_y(oStruct)
+		target.x = raylib_get_Camera2D_target_x(oStruct)
+		target.y = raylib_get_Camera2D_target_y(oStruct)
+		rotation = raylib_get_Camera2D_rotation(oStruct)
+		zoom = raylib_get_Camera2D_zoom(oStruct)
 
 class Mesh from RayLibBase
 
@@ -955,6 +1016,18 @@ class VrDeviceInfo  from RayLibBase
 		eyeToScreenDistance = raylib_get_VrDeviceInfo_eyeToScreenDistance(oStruct)
 		lensSeparationDistance = raylib_get_VrDeviceInfo_lensSeparationDistance(oStruct)
 		interpupillaryDistance = raylib_get_VrDeviceInfo_interpupillaryDistance(oStruct)
+
+class VrStereoConfig
+
+	oData
+
+	func init 
+
+	func data 
+		return oData 
+
+	func setdata oStruct 
+		oData = oStruct  
 
 class RayCollision from RayLibBase
 
