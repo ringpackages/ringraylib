@@ -877,6 +877,9 @@ func LoadFont fileName
 func UnloadFont font
 	return UnloadFont_2(GPData(font))
 
+func ExportFontAsCode font, fileName
+	return ExportFontAsCode_2(GPData(font), fileName)
+
 func GetMousePosition
 	oVector = new Vector2
 	oVector.setData( GetMousePosition_2()  )
@@ -917,6 +920,11 @@ func LoadWave fileName
 func IsWaveReady wave
 	return IsWaveReady_2(GPData(wave))
 
+func LoadWaveFromMemory fileType, fileData, dataSize
+	oWave = new Wave
+	oWave.setData( LoadWaveFromMemory_2(fileType, fileData, dataSize) )
+	return oWave
+
 func LoadWaveEx data, sampleCount, sampleRate, sampleSize, channels
 	oWave = new Wave
 	oWave.setData( LoadWaveEx_2(data, sampleCount, sampleRate, sampleSize, channels) )
@@ -927,6 +935,12 @@ func LoadSound fileName
 
 func IsSoundReady sound
 	return IsSoundReady_2(GPData(sound))
+
+func LoadSoundAlias source
+	return LoadSoundAlias_2(GPData(source))
+
+func UnloadSoundAlias alias
+	return UnloadSoundAlias_2(GPData(alias))
 
 func UpdateSound sound, data, samplesCount
 	return UpdateSound_2(GPData(sound), data, samplesCount)
@@ -1233,6 +1247,11 @@ func GenImageCellular width, height, tileSize
 	oImage.setData(GenImageCellular_2( width, height, tileSize) )
 	return oImage
 
+func GenImageText width, height, text
+	oImage = new Image
+	oImage.setData(GenImageText_2( width, height, text) )
+	return oImage
+
 func GenTextureMipmaps texture
 	return GenTextureMipmaps_2( GPData(texture) )
 
@@ -1252,7 +1271,18 @@ func GetFontDefault
 
 func LoadFontEx fileName, fontSize, fontChars, charsCount
 	oFont = new Font 
-	oFont.setData(LoadFontEx_2( fileName, fontSize, fontChars, charsCount ) )
+	if fontChars = 0 or fontChars = NULL
+		# Default character set: ASCII 32-126 (95 printable characters)
+		cDefault = " "
+		for i = 33 to 126
+			cDefault += char(i)
+		next
+		pCodepoints = LoadCodepoints(cDefault, 0)
+		oFont.setData(LoadFontEx_2( fileName, fontSize, pCodepoints, 95 ) )
+		UnloadCodepoints(pCodepoints)
+	else
+		oFont.setData(LoadFontEx_2( fileName, fontSize, fontChars, charsCount ) )
+	ok
 	return oFont
 
 func LoadFontFromImage image, key, firstChar
@@ -1371,6 +1401,9 @@ func UnloadModelAnimation anim
 
 func IsModelAnimationValid model, anim
 	return IsModelAnimationValid_2( GPData(model), GPData(anim) )
+
+func UnloadModelAnimations animations, animCount
+	return UnloadModelAnimations_2( GPData(animations), animCount )
 
 func GenMeshPoly sides, radius
 	oMesh = new Mesh 
@@ -1561,6 +1594,9 @@ func LoadMusicStreamFromMemory fileType, data, dataSize
 
 func IsMusicReady music
 	return IsMusicReady_2( GPData(music) )
+
+func IsMusicStreamPlaying music
+	return IsMusicStreamPlaying_2( GPData(music) )
 
 func UnloadMusicStream music
 	return UnloadMusicStream_2( GPData(music) )
